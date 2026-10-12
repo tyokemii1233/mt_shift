@@ -1,7 +1,7 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>エムティ流通 社内アプリ v21</title><style>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>エムティ流通 社内アプリ v22</title><style>
 :root{--bg:#fff9f7;--card:#fff;--ink:#5b4544;--muted:#9b8582;--line:#f0dedc;--accent:#c98f91;--accent2:#f6e2e1;--cream:#fff4eb;--shadow:0 8px 28px rgba(118,77,77,.08)}*{box-sizing:border-box}body{margin:0;font-family:Meiryo,"メイリオ",sans-serif;background:linear-gradient(180deg,#fff7f4 0,#fffaf8 45%,#fff 100%);color:var(--ink)}button,input,select,textarea{font-family:Meiryo,"メイリオ",sans-serif}.app{max-width:520px;margin:auto;padding:22px 16px 110px}.head{padding:14px 4px 10px}.head:before{content:"SHIFT & WORK";display:block;font-size:10px;letter-spacing:.22em;color:var(--accent);font-weight:700;margin-bottom:5px}.head h1{margin:0;font-size:27px;letter-spacing:.02em}.head small{color:var(--muted)}.tabs{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);width:min(calc(100% - 24px),496px);display:grid;grid-template-columns:repeat(5,1fr);gap:5px;background:rgba(255,255,255,.96);padding:7px;border:1px solid var(--line);border-radius:22px;z-index:20;box-shadow:0 10px 35px rgba(111,70,70,.16);backdrop-filter:blur(12px)}.tab{border:0;background:transparent;padding:10px 3px 8px;border-radius:16px;font-weight:700;color:var(--muted);font-size:12px}.tab:before{display:block;font-size:20px;margin-bottom:2px}.tab[data-page="mypage"]:before{content:"♡"}.tab[data-page="register"]:before{content:"＋"}.tab[data-page="shifts"]:before{content:"▣"}.tab[data-page="staffing"]:before{content:"▥"}.tab.on{background:var(--accent2);color:#8c5e60}.page{display:none}.page.on{display:block}.card{background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:25px;padding:20px 17px;margin:13px 0;box-shadow:var(--shadow)}h2{font-size:20px;margin:0 0 5px;color:#6c5050}.sub{font-size:12px;color:var(--muted);margin:0 0 15px;line-height:1.7}label{font-size:12px;font-weight:700;display:block;margin:14px 2px 6px;color:#735b59}.req{color:#c96e75}input,select,textarea{width:100%;padding:13px 14px;border:1px solid #ead8d5;border-radius:15px;background:#fffcfb;font-size:15px;color:var(--ink);outline:none;transition:.2s}input:focus,select:focus,textarea:focus{border-color:#d4a5a5;box-shadow:0 0 0 3px #f9e9e8;background:#fff}textarea{min-height:90px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:9px}.primary,.secondary,.mini{border-radius:15px;font-weight:700;cursor:pointer}.primary{width:100%;padding:14px;margin-top:16px;background:linear-gradient(135deg,#c98f91,#b77d80);color:#fff;border:0;box-shadow:0 7px 18px rgba(185,124,128,.22)}.secondary{width:100%;padding:12px;margin-top:9px;background:#fff;border:1px solid #e5cecc;color:#775b59}.mini{padding:8px 11px;background:#fff7f5;border:1px solid #ead6d3;color:#805f5e}.summary{display:flex;gap:13px;align-items:center;background:linear-gradient(135deg,#fff4ef,#fbe9e7);border-radius:20px;padding:14px;margin-bottom:12px}.avatar{width:56px;height:56px;border-radius:18px;background:#fff;display:grid;place-items:center;font-size:25px;box-shadow:0 4px 15px #9d6f6f12}.muted{color:var(--muted);font-size:12px}.shift{padding:15px 14px;margin:10px 0;border:1px solid var(--line);border-radius:18px;background:linear-gradient(135deg,#fff,#fff9f7)}.shift:last-child{border-bottom:1px solid var(--line)}.shift b{font-size:15px;color:#684e4e}.actions{display:flex;gap:7px;margin-top:10px}.copybox{background:#fff9f6;border:1px solid #edd8d4;border-radius:18px;padding:14px;margin-top:12px}.checks{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:9px}.check{display:flex;align-items:center;gap:7px;border:1px solid #ead9d6;background:#fff;border-radius:13px;padding:10px;font-size:12px}.check input{width:20px;height:20px;accent-color:#bd8184}.check:has(input:checked){border-color:#c99092;background:#fcebea}.hide{display:none}.notice{font-size:11px;line-height:1.7;background:#fff8e9;border:1px solid #f1dfb9;padding:11px;border-radius:14px;margin-top:11px;color:#816e55}.ok{font-size:12px;background:#f1f7ef;border:1px solid #dcebd8;padding:11px;border-radius:13px;margin-top:10px}.empty{text-align:center;color:#aa9693;padding:30px 5px}.bank{margin-top:10px;padding-top:4px;border-top:1px dashed #e4cbc8}.pill{display:inline-block;font-size:10px;background:#fff;border:1px solid #ead8d5;border-radius:99px;padding:5px 8px;margin:4px 3px 0 0;color:#866b68}.copybox>b{color:#8a6262}.card>h2:after{content:"";display:block;width:34px;height:3px;border-radius:5px;background:#e6b8b7;margin-top:8px;margin-bottom:14px}@media(max-width:370px){.checks{grid-template-columns:1fr}.row{grid-template-columns:1fr}.app{padding-left:12px;padding-right:12px}}
 .boarditem{padding:14px;border:1px solid var(--line);border-radius:16px;margin:10px 0;background:#fff}.boarditem.important{border-color:#d9a8b4;background:#fff8fa}.badge{display:inline-block;padding:4px 8px;border-radius:99px;font-size:11px;font-weight:800;background:#f2e3e7;color:#80515d}.adminbox{background:#fffaf5;border:1px solid #eadfd5;border-radius:18px;padding:15px;margin:13px 0}.nav4{grid-template-columns:repeat(4,1fr)!important}
-.linebox{background:#f3fbf5;border:1px solid #bce3c8;border-radius:19px;padding:15px;margin:14px 0}.linebtn{background:#06c755!important;box-shadow:none!important}.statusdot{display:inline-block;width:9px;height:9px;background:#e0a67b;border-radius:50%;margin-right:7px}.statusdot.connected{background:#06c755}.linehelp{font-size:12px;line-height:1.8;color:#68776a}.lineuser{font-size:13px;font-weight:700;margin:10px 0}.lineuser img{width:34px;height:34px;border-radius:50%;vertical-align:middle;margin-right:8px}.lineactions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.lineactions button{margin-top:6px} 
+.linebox{background:#f3fbf5;border:1px solid #bce3c8;border-radius:19px;padding:15px;margin:14px 0}.linebtn{background:#06c755!important;box-shadow:none!important}.statusdot{display:inline-block;width:9px;height:9px;background:#e0a67b;border-radius:50%;margin-right:7px}.statusdot.connected{background:#06c755}.linehelp{font-size:12px;line-height:1.8;color:#68776a}.lineuser{font-size:13px;font-weight:700;margin:10px 0}.lineuser img{width:34px;height:34px;border-radius:50%;vertical-align:middle;margin-right:8px}.lineactions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.lineactions button{margin-top:6px}
 
 .staff-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}.metric{padding:12px 8px;border-radius:16px;text-align:center;border:1px solid var(--line);background:#fff}.metric b{display:block;font-size:20px}.metric span{font-size:10px;color:var(--muted)}.hourgrid{display:grid;gap:9px;margin-top:12px}.hourcard{display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:10px;padding:13px;border-radius:17px;border:1px solid var(--line);background:#fff;cursor:pointer}.hourcard.good{background:#f2faf3;border-color:#cfe8d2}.hourcard.warn{background:#fff9e8;border-color:#eddca9}.hourcard.bad{background:#fff0f1;border-color:#e8b7bd}.hourtime{font-weight:800;font-size:14px}.hourcount{font-size:12px}.hourcount b{font-size:22px;margin-right:3px}.statuslabel{font-size:11px;font-weight:800;padding:5px 8px;border-radius:99px;background:#fff}.needgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:10px}.needitem{background:#fff9f7;border:1px solid var(--line);border-radius:13px;padding:8px;text-align:center}.needitem span{display:block;font-size:10px;color:var(--muted);margin-bottom:4px}.needitem input{padding:8px;text-align:center}.workerlist{margin-top:10px;padding:12px;border-radius:15px;background:#fffaf8;border:1px dashed #e4c9c6}.worker{padding:7px 0;border-bottom:1px solid #f1e4e2;font-size:12px}.worker:last-child{border-bottom:0}.hourcard{display:block}.hourtop{display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:10px}.hourworkers{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;padding-top:10px;border-top:1px solid rgba(120,90,90,.12)}.workerchip{display:inline-flex;align-items:center;gap:4px;padding:6px 9px;border-radius:999px;background:rgba(255,255,255,.82);border:1px solid rgba(150,110,110,.16);font-size:11px;font-weight:700}.workerchip small{font-weight:400;color:var(--muted)}.noworker{font-size:11px;color:var(--muted);padding:3px 0}@media(max-width:370px){.needgrid{grid-template-columns:repeat(3,1fr)}.hourcard{grid-template-columns:58px 1fr auto}}
 
@@ -9,483 +9,2650 @@
 .viewtoggle{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:14px 0 10px}.viewbtn{padding:10px;border-radius:13px;border:1px solid #e5cecc;background:#fff;color:#775b59;font-weight:700;cursor:pointer}.viewbtn.on{background:var(--accent2);border-color:#d8a9aa;color:#7c5557}.matrixwrap{overflow:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:17px;background:#fff;max-height:65vh}.staffmatrix{border-collapse:separate;border-spacing:0;min-width:max-content;font-size:11px}.staffmatrix th,.staffmatrix td{border-right:1px solid #f0e3e1;border-bottom:1px solid #f0e3e1;text-align:center;height:42px;min-width:72px;padding:5px 7px;white-space:nowrap}.staffmatrix thead th{position:sticky;top:0;z-index:3;background:#fff7f5;color:#765958;font-weight:800}.staffmatrix .timecol{position:sticky;left:0;z-index:2;min-width:68px;background:#fffaf8;font-weight:800}.staffmatrix thead .timecol{z-index:4;background:#f7e7e5}.staffmatrix td.working{background:#edf7ee;font-weight:800;color:#4e7255}.staffmatrix td.off{background:#fff;color:#c9b8b5}.staffmatrix tr.shortage .timecol{background:#fff0f1;color:#a6535e}.staffmatrix .personhead{max-width:100px;overflow:hidden;text-overflow:ellipsis}.matrixlegend{display:flex;gap:12px;flex-wrap:wrap;margin:9px 2px 3px;font-size:10px;color:var(--muted)}.legenddot{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:4px;vertical-align:-1px;border:1px solid #ddd}.legenddot.work{background:#edf7ee}.legenddot.short{background:#fff0f1}.matrixcount{font-size:10px;color:var(--muted);margin:4px 0 10px}.matrixempty{padding:25px;text-align:center;color:var(--muted);min-width:280px}.hourlist-hide{display:none}
 
 /* v13 人員配置ダッシュボード */
-.shortage-panel{margin:14px 0;padding:15px;border-radius:18px;background:#fff0f1;border:1px solid #e8b7bd}.shortage-panel h3{margin:0 0 9px;font-size:15px;color:#9b4f59}.shortage-row{display:grid;grid-template-columns:88px 1fr auto;gap:8px;align-items:center;padding:9px 0;border-bottom:1px solid #f0d7da;font-size:12px}.shortage-row:last-child{border-bottom:0}.shortage-row b{font-size:13px}.shortage-num{font-weight:800;color:#a84f5b;background:#fff;padding:5px 8px;border-radius:99px}.allgood-panel{margin:14px 0;padding:14px;border-radius:18px;background:#f1f7ef;border:1px solid #dcebd8;font-size:12px}.staff-total{background:linear-gradient(135deg,#fff4ef,#fbe9e7);border:1px solid #efd8d5;border-radius:18px;padding:14px;margin:12px 0}.staff-total b{font-size:28px;color:#795758}.staff-total span{font-size:12px;color:var(--muted);margin-left:5px}.staff-total .names{margin-top:8px;font-size:11px;line-height:1.8;color:#7d6663}.sectioncap{font-size:13px;font-weight:800;margin:18px 2px 8px;color:#735b59}.hourcard.bad{box-shadow:0 5px 16px rgba(178,74,87,.08)}
-.authgate{padding:15px 16px;margin:12px 0;border-radius:18px;font-size:13px;line-height:1.7;font-weight:700}.authgate.pending{background:#fff8e9;border:1px solid #f1dfb9;color:#816e55}.authgate.approved{background:#f1f7ef;border:1px solid #dcebd8;color:#55705a}.authgate.rejected{background:#fff0f1;border:1px solid #e8b7bd;color:#9b4f59}.tab.locked{opacity:.38;pointer-events:none}
-.approval-admin{background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;margin:12px 0}
-.approval-admin h2{margin:0 0 8px}
-.approval-row{border:1px solid var(--line);border-radius:16px;padding:13px;margin:10px 0;background:#fffaf8}
-.approval-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
-.approve-btn{background:#edf7ee;border:1px solid #bdd9c2;color:#42664a}
-.reject-btn{background:#fff0f1;border:1px solid #e7bdc2;color:#98545c}
-.admin-tag{display:inline-block;background:#f2e3e7;color:#80515d;border-radius:99px;padding:3px 8px;font-size:11px;font-weight:800;margin-left:6px}
-</style></head><body><div class="app"><div class="head"><h1>シフト管理</h1><small>エムティ流通株式会社｜社内アプリ v21</small></div><div class="tabs"><button class="tab on" data-page="mypage">マイページ</button><button class="tab" data-page="register">シフト登録</button><button class="tab" data-page="shifts">シフト確認</button><button class="tab" data-page="staffing">人員配置</button><button class="tab" data-page="board">掲示板</button></div>
-<div class="linebox"><b>🟢 LINE連携</b><div class="linehelp" id="lineStatus"><span class="statusdot"></span>未接続（デモモード）</div><div id="lineUser" class="lineuser"></div><div class="lineactions"><button class="mini" id="lineLogin">LINEでログイン</button><button class="mini" id="lineLogout">ログアウト</button></div><details style="margin-top:12px"><summary style="font-size:12px;cursor:pointer">⚙️ LINE接続設定（管理者・開発者向け）</summary><label>LIFF ID</label><input id="liffId" placeholder="例：1234567890-AbCdEfGh" autocomplete="off"><button class="secondary" id="saveLiff">LIFF IDを保存して初期化</button><p class="linehelp">LINE Developersで発行したLIFF IDを入力してください。HTTPS公開とエンドポイントURL設定が必要です。チャネルシークレットやアクセストークンは絶対にここへ入力しないでください。</p></details></div><div id="authGate" class="hide"></div>
-<div id="approvalAdmin" class="approval-admin hide">
-  <h2>🔐 従業員承認 <span class="admin-tag">管理者のみ</span></h2>
-  <p class="sub">初回LINE登録した従業員をここから承認・却下できます。</p>
-  <button class="secondary" id="refreshPending" type="button">承認待ちを更新</button>
-  <div id="pendingEmployees"><div class="muted">読み込み待ちです</div></div>
-</div><section id="mypage" class="page on"><div class="card"><h2>👤 マイページ</h2>
-<p class="sub">本アプリはシフト登録・確認のための社内アプリです。</p>
-<div id="profileSummary" class="hide"></div>
-<label>氏名 <span class="req">*</span></label><input id="name" placeholder="例：遠藤 未菜">
-<label>部署</label><select id="department"><option value="">選択してください</option><option>出荷</option><option>入荷</option><option>リフト</option><option>その他</option></select>
-<label>主な勤務時間</label><div class="row"><div><input id="usualStart" type="time" value="09:00"></div><div><input id="usualEnd" type="time" value="17:45"></div></div>
-<button class="primary" id="saveProfile">マイページを保存</button><div id="savedMsg"></div>
-<div class="copybox"><b>🔒 個人情報の取り扱い</b>
-<div class="notice">本アプリは、従業員のシフト登録・確認および人員配置管理を目的として利用します。LINE連携により取得した情報および氏名・部署等の必要最小限の情報は、本人確認・従業員承認・シフト管理のためにのみ利用します。住所、電話番号、生年月日、銀行口座、社会保険番号、マイナンバー等のシフト管理に不要な個人情報は、本アプリでは収集しません。</div>
+.shortage-panel{margin:14px 0;padding:15px;border-radius:18px;background:#fff0f1;border:1px solid #e8b7bd}.shortage-panel h3{margin:0 0 9px;font-size:15px;color:#9b4f59}.shortage-row{display:grid;grid-template-columns:88px 1fr auto;gap:8px;align-items:center;padding:9px 0;border-bottom:1px solid #f0d7da;font-size:12px}.shortage-row:last-child{border-bottom:0}.shortage-num{font-weight:800;color:#a6535e}.allgood-panel{margin:14px 0;padding:14px;border-radius:18px;background:#f2faf3;border:1px solid #cfe8d2;font-size:12px;font-weight:700;color:#52765a}.staff-total{padding:15px;border-radius:18px;background:linear-gradient(135deg,#fff4ef,#fbe9e7);border:1px solid #efd7d4;margin:10px 0}.staff-total b{font-size:27px;margin-right:4px}.staff-total span{font-size:11px;color:var(--muted)}.staff-total .names{font-size:11px;line-height:1.8;margin-top:6px;color:#765b59}.viewtoggle.three{grid-template-columns:repeat(3,1fr)}.viewbtn[data-view="dashboard"]{background:#fff7f5}.viewbtn[data-view="dashboard"].on{background:var(--accent2)}.dashboard-section{margin-top:10px}
+
+/* v14 シフト一覧・CSV */
+.admin-shift-list{margin-top:12px}.admin-shift-row{padding:12px;border:1px solid var(--line);border-radius:15px;margin:8px 0;background:#fff}.admin-shift-row b{font-size:13px}.admin-shift-row .muted{margin-top:3px}.csv-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}.csv-actions button{margin-top:0}.range-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}.range-row label{margin-top:6px}.tiny{font-size:10px;color:var(--muted);line-height:1.6}
+
+/* v15 実働・申請 */
+.request-status{margin-top:8px;padding:9px 10px;border-radius:12px;font-size:11px;font-weight:700}.request-status.pending{background:#fff8e9;border:1px solid #f1dfb9;color:#816e55}.request-status.approved{background:#f1f7ef;border:1px solid #dcebd8;color:#52765a}.request-status.rejected{background:#fff0f1;border:1px solid #e8b7bd;color:#9b4f59}.actualbox{margin-top:8px;padding:10px 11px;border-radius:13px;background:#f7f4ff;border:1px solid #e0d9f1;font-size:11px;color:#655b7c}.actualform{margin-top:10px;padding:13px;border-radius:16px;background:#fffaf5;border:1px solid #eadfd5}.actualform .row{margin-bottom:7px}.actualform label{margin-top:7px}.admin-request-row{padding:13px;border:1px solid var(--line);border-radius:16px;margin:9px 0;background:#fff}.admin-request-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:9px}.admin-request-actions button{margin-top:0}.request-admin-panel{margin-top:14px;padding-top:4px;border-top:1px dashed #e4cbc8}
+
+/* v16 承認管理 */
+.authgate{margin:12px 0;padding:13px 14px;border-radius:16px;font-size:12px;font-weight:700;line-height:1.7}.authgate.pending{background:#fff8e9;border:1px solid #f1dfb9;color:#816e55}.authgate.approved{background:#f1f7ef;border:1px solid #dcebd8;color:#52765a}.authgate.rejected{background:#fff0f1;border:1px solid #e8b7bd;color:#9b4f59}.approval-admin{background:#fff;border:1px solid var(--line);border-radius:18px;padding:15px;margin:13px 0}.approval-admin h2{margin:0 0 8px}.approval-row{border:1px solid var(--line);border-radius:16px;padding:13px;margin:10px 0;background:#fffaf8}.approval-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}.approve-btn{background:#edf7ee;border:1px solid #cfe8d2;color:#52765a;border-radius:12px;padding:10px;font-weight:800}.reject-btn{background:#fff0f1;border:1px solid #e8b7bd;color:#9b4f59;border-radius:12px;padding:10px;font-weight:800}.admin-tag{display:inline-block;background:#f6e2e1;border:1px solid #e4c4c3;color:#7d5658;border-radius:99px;padding:3px 7px;font-size:10px;font-weight:800;margin-left:6px}
+</style></head><body><div class="app"><div class="head"><h1>シフト管理</h1><small>エムティ流通株式会社｜社内アプリ v22</small></div><div class="tabs">
+<button class="tab on" data-page="mypage">マイページ</button>
+<button class="tab" data-page="register">シフト登録</button>
+<button class="tab" data-page="shifts">シフト確認</button>
+<button class="tab" data-page="staffing">人員配置</button>
+<button class="tab" data-page="board">掲示板</button>
 </div>
-<div class="notice">※LINE本人確認・従業員承認・シフト情報はSupabaseと連携します。氏名・部署・主な勤務時間の表示設定のみ、この端末に保存されます。</div>
-</div></section><section id="register" class="page"><div class="card"><h2>＋ シフト登録</h2><p class="sub">LINE認証された本人のシフトとして共有データベースに登録します。</p><label>氏名</label><input id="shiftName" placeholder="氏名は手入力もできます"><label>勤務日</label><input id="workDate" type="date"><div class="row"><div><label>出勤時間</label><input id="start" type="time"></div><div><label>退勤時間</label><input id="end" type="time"></div></div><label>休憩時間 <span class="muted">（該当するものにチェック）</span></label><div class="copybox break-options" id="breakOptions">
-<label class="check break-none"><input type="checkbox" value="none" id="breakNone"><span>1. 休憩なし</span></label>
-<label class="check"><input type="checkbox" name="breakSlot" value="10:30-10:45"><span>2. 10:30〜10:45</span></label>
-<div class="muted" style="margin:8px 2px 4px">3. 昼休憩（いずれか1つ）</div>
-<label class="check"><input type="radio" name="lunchBreak" value="12:00-12:15"><span>3-1. 12:00〜12:15</span></label>
-<label class="check"><input type="radio" name="lunchBreak" value="12:00-12:30"><span>3-2. 12:00〜12:30</span></label>
-<label class="check"><input type="radio" name="lunchBreak" value="12:00-12:45"><span>3-3. 12:00〜12:45</span></label>
-<label class="check"><input type="radio" name="lunchBreak" value="12:00-13:00"><span>3-4. 12:00〜13:00</span></label>
-<label class="check"><input type="checkbox" name="breakSlot" value="15:00-15:15"><span>4. 15:00〜15:15</span></label>
-<label class="check"><input type="checkbox" name="breakSlot" value="17:45-18:00"><span>5. 17:45〜18:00</span></label>
-<label class="check"><input type="checkbox" name="breakSlot" value="20:00-22:00"><span>6. 20:00〜22:00</span></label>
-</div><button class="primary" id="addShift">このシフトを登録</button><div id="shiftMsg"></div></div></section>
-<section id="shifts" class="page"><div class="card"><h2>📅 自分のシフト</h2><p class="sub">登録後の変更・取消は申請制です。実際に働いた時間は「実働入力」から記録できます。</p><div id="shiftList"></div></div></section><section id="staffing" class="page"><div class="card"><h2>📊 人員配置</h2><p class="sub">登録済みシフトから、1時間ごとの勤務人数を自動集計します。各時間帯に勤務している全員の名前も一覧で表示します。</p><label>確認する日</label><input id="staffDate" type="date"><div class="actions" style="margin-top:10px"><button class="secondary" id="refreshStaffBtn">🔄 最新の人員配置を更新</button><button class="secondary" id="csvDayBtn">📥 この日をCSV出力</button></div><details style="margin-top:10px"><summary style="font-size:12px;font-weight:700;cursor:pointer">📥 期間指定CSV</summary><div class="row" style="margin-top:10px"><div><label>開始日</label><input id="csvFrom" type="date"></div><div><label>終了日</label><input id="csvTo" type="date"></div></div><button class="secondary" id="csvRangeBtn">期間をCSV出力</button></details><div class="row"><div><label>基本の必要人数</label><input id="defaultNeed" type="number" min="0" max="999" value="10"></div><div style="display:flex;align-items:end"><button class="secondary" id="applyDefaultNeed" style="margin:0">全時間に反映</button></div></div><details style="margin-top:12px"><summary style="font-size:12px;font-weight:700;cursor:pointer">⚙️ 時間ごとの必要人数を調整</summary><div id="needGrid" class="needgrid"></div></details><div class="notice" style="background:#f8f1f1;border-color:#ead6d3"><b>管理者用データ出力</b><br>上の「この日をCSV出力」、または「期間指定CSV」からExcelで開けるCSVを保存できます。</div><div id="staffSummary"></div><div id="shortageAlert"></div>
-<div class="sectioncap">シフト変更・取消申請</div>
-<div id="requestList"><div class="empty">申請を読み込んでいます...</div></div>
-<div class="sectioncap">登録シフト一覧</div><div id="adminShiftList"></div><div class="viewtoggle"><button class="viewbtn on" id="listViewBtn">時間別一覧</button><button class="viewbtn" id="matrixViewBtn">人員配置表</button></div><div id="listArea"><div class="sectioncap">1時間ごとの人数・勤務者</div><div id="hourGrid" class="hourgrid"></div><div id="workerDetail"></div></div><div id="matrixArea" class="hide"><div class="sectioncap">全員の人員配置表</div><div class="matrixcount">横：従業員 ／ 縦：時間　※横にスクロールできます</div><div id="staffMatrix"></div><div class="matrixlegend"><span><i class="legenddot work"></i>勤務中</span><span><i class="legenddot short"></i>必要人数未満の時間</span></div></div><div class="notice">人数は登録した休憩時間を反映し、各1時間の中を15分単位で確認した「最少の配置可能人数」を表示します。●＝勤務、◐＝その時間内に休憩あり。</div></div></section><section id="board" class="page"><div class="card"><h2>📢 社内掲示板</h2><p class="sub">エムティ流通株式会社からのお知らせ</p><div id="boardList"></div></div><div class="adminbox"><h2>🔐 管理者メニュー（試作）</h2><p class="sub">掲示板投稿・一斉メッセージ作成</p><label>タイトル</label><input id="postTitle" placeholder="例：明日の出勤について"><label>内容</label><textarea id="postBody" placeholder="お知らせ内容を入力"></textarea><label>重要度</label><select id="postPriority"><option value="normal">通常</option><option value="important">重要</option></select><button class="primary" id="addPost">掲示板へ投稿</button><hr style="border:0;border-top:1px dashed #ddd;margin:20px 0"><h2>💌 一斉メッセージ</h2><label>送信先</label><select id="messageTarget"><option>全従業員</option><option>出荷</option><option>入荷</option><option>リフト</option><option>個人選択</option></select><label>メッセージ</label><textarea id="messageBody" placeholder="LINEで送る内容を入力"></textarea><button class="primary" id="previewMessage">送信内容を確認</button><div id="messagePreview"></div><button class="secondary" id="shareLine">LINEで共有（送信先は自分で選択）</button><div class="linehelp">※「LINEで共有」は端末のLINE共有画面を開く機能です。会社からの自動一斉配信ではありません。</div><div class="notice">LINEログインと送信は別の機能です。LINE公式アカウントからの一斉送信には、認証済み管理者API・Messaging API・従業員の友だち登録が必要です。</div></div></section></div>
-<script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script><script>
-const $=id=>document.getElementById(id); const profileKeys=['name','department','usualStart','usualEnd'];
-const getProfile=()=>{let old=JSON.parse(localStorage.getItem('shiftProfileV9')||'{}');return {name:old.name||'',department:old.department||'',usualStart:old.usualStart||'09:00',usualEnd:old.usualEnd||'17:45'}}; const getShifts=()=>JSON.parse(localStorage.getItem('shiftsV6')||localStorage.getItem('shiftsV5')||localStorage.getItem('shiftsV4')||'[]'); const setShifts=x=>localStorage.setItem('shiftsV6',JSON.stringify(x));
-function switchPage(id){if(id!=='mypage'&&authState.checked&&!authState.approved){alert('管理者の承認後に利用できます');id='mypage'}document.querySelectorAll('.page').forEach(x=>x.classList.toggle('on',x.id===id));document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x.dataset.page===id)); if(id==='register')prefillShift(); if(id==='shifts')renderShifts(); if(id==='staffing')renderStaffing(); if(id==='board')renderBoard()}
-document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>switchPage(b.dataset.page));
-function loadProfile(){let p=getProfile();profileKeys.forEach(k=>{if($(k)&&p[k]!=null)$(k).value=p[k]});renderSummary()}
-function renderSummary(){let p=getProfile();if(!p.name){$('profileSummary').classList.add('hide');return}$('profileSummary').classList.remove('hide');$('profileSummary').innerHTML=`<div class="summary"><div class="avatar">👤</div><div><b>${esc(p.name)}</b><div class="muted">${esc(p.department||'部署未設定')}</div><span class="pill">${esc((p.usualStart||'--:--')+'〜'+(p.usualEnd||'--:--'))}</span></div></div>`}
-$('saveProfile').onclick=()=>{let p={};profileKeys.forEach(k=>{if($(k))p[k]=$(k).value});if(!p.name.trim()){alert('氏名を入力してください');return}localStorage.setItem('shiftProfileV9',JSON.stringify(p));$('savedMsg').innerHTML='<div class="ok">✓ マイページを保存しました</div>';renderSummary();prefillShift()};
-function prefillShift(){let p=getProfile();if(p.name&&!$('shiftName').value)$('shiftName').value=p.name;if(p.usualStart&&!$('start').value)$('start').value=p.usualStart;if(p.usualEnd&&!$('end').value)$('end').value=p.usualEnd;if(!$('workDate').value)$('workDate').value=new Date().toISOString().slice(0,10)}
-function selectedBreaks(){if($('breakNone').checked)return [];let a=[...document.querySelectorAll('input[name="breakSlot"]:checked')].map(x=>x.value);let lunch=document.querySelector('input[name="lunchBreak"]:checked');if(lunch)a.push(lunch.value);return a}
-function breakMinutes(a){return (a||[]).reduce((n,r)=>{let [x,y]=r.split('-').map(hmToMin);return n+Math.max(0,y-x)},0)}
-$('breakNone').onchange=()=>{if($('breakNone').checked)document.querySelectorAll('input[name="breakSlot"],input[name="lunchBreak"]').forEach(x=>x.checked=false)};document.querySelectorAll('input[name="breakSlot"],input[name="lunchBreak"]').forEach(x=>x.onchange=()=>{if(x.checked)$('breakNone').checked=false});
-$('addShift').onclick=()=>{let breaks=selectedBreaks();let s={id:Date.now(),name:$('shiftName').value.trim(),date:$('workDate').value,start:$('start').value,end:$('end').value,breaks,breakMin:String(breakMinutes(breaks))};if(!s.name||!s.date||!s.start||!s.end){alert('氏名・勤務日・出勤時間・退勤時間を入力してください');return}let a=getShifts();a.push(s);setShifts(a);$('shiftMsg').innerHTML='<div class="ok">✓ シフトを登録しました</div>';};
-function fmtDate(d){let x=new Date(d+'T00:00:00');return `${x.getMonth()+1}/${x.getDate()}（${'日月火水木金土'[x.getDay()]}）`}
-function renderShifts(){let a=getShifts().sort((x,y)=>x.date.localeCompare(y.date));let p=getProfile();let filtered=p.name?a.filter(x=>x.name===p.name):a;if(!filtered.length){$('shiftList').innerHTML='<div class="empty">登録済みシフトはありません</div>';return}$('shiftList').innerHTML=filtered.map(s=>`<div class="shift"><b>${fmtDate(s.date)}　${esc(s.name)}</b><div class="muted">${s.start}〜${s.end} ／ 休憩：${s.breaks&&s.breaks.length?s.breaks.join('・'):(Number(s.breakMin)>0?s.breakMin+'分':'なし')}</div><div class="actions"><button class="mini" onclick="openCopy(${s.id})">✓ 複写</button><button class="mini" onclick="delShift(${s.id})">削除</button></div><div id="copy-${s.id}"></div></div>`).join('')}
-window.delShift=id=>{if(confirm('このシフトを削除しますか？')){setShifts(getShifts().filter(x=>x.id!==id));renderShifts()}}
-window.openCopy=id=>{let s=getShifts().find(x=>x.id===id), box=$('copy-'+id);let base=new Date(s.date+'T00:00:00');let days=[];for(let i=1;i<=14;i++){let d=new Date(base);d.setDate(d.getDate()+i);let iso=d.toISOString().slice(0,10);days.push(`<label class="check"><input type="checkbox" class="copyday-${id}" value="${iso}"><span>${fmtDate(iso)}</span></label>`)}box.innerHTML=`<div class="copybox"><b>複写する日を選択</b><div class="muted">レ点を入れた日だけ複写します</div><div class="actions"><button class="mini" onclick="selectAll(${id},true)">すべて選択</button><button class="mini" onclick="selectAll(${id},false)">すべて解除</button></div><div class="checks">${days.join('')}</div><button class="primary" onclick="copySelected(${id})">✓ 選択した日に複写</button></div>`}
-window.selectAll=(id,on)=>document.querySelectorAll('.copyday-'+id).forEach(x=>x.checked=on);
-window.copySelected=id=>{let src=getShifts().find(x=>x.id===id);let dates=[...document.querySelectorAll('.copyday-'+id+':checked')].map(x=>x.value);if(!dates.length){alert('複写する日を選択してください');return}let a=getShifts();dates.forEach((d,i)=>a.push({...src,id:Date.now()+i,date:d}));setShifts(a);renderShifts();alert(dates.length+'日分を複写しました')}
-function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 
-const staffingHours=Array.from({length:15},(_,i)=>i+7);
-const needKey='mtStaffNeedsV10';
-function hmToMin(v){if(!v)return 0;let [h,m]=v.split(':').map(Number);return h*60+m}
-function getNeeds(){let saved=JSON.parse(localStorage.getItem(needKey)||'{}');let def=parseInt($('defaultNeed')?.value||10);let out={};staffingHours.forEach(h=>out[h]=saved[h]!=null?Number(saved[h]):def);return out}
-function saveNeeds(obj){localStorage.setItem(needKey,JSON.stringify(obj))}
-function renderNeedGrid(){if(!$('needGrid'))return;let n=getNeeds();$('needGrid').innerHTML=staffingHours.map(h=>`<div class="needitem"><span>${String(h).padStart(2,'0')}:00</span><input type="number" min="0" max="999" value="${n[h]}" data-need-hour="${h}"></div>`).join('');document.querySelectorAll('[data-need-hour]').forEach(el=>el.onchange=()=>{let x=getNeeds();x[el.dataset.needHour]=Math.max(0,Number(el.value||0));saveNeeds(x);renderStaffing(false)})}
-function isOnBreak(s,t){return (s.breaks||[]).some(r=>{let [a,b]=r.split('-').map(hmToMin);return t>=a&&t<b})}
-function peopleForHour(date,h){let from=h*60,to=(h+1)*60,shifts=getShifts().filter(s=>s.date===date&&hmToMin(s.start)<to&&hmToMin(s.end)>from).sort((a,b)=>a.start.localeCompare(b.start));let points=[from,from+15,from+30,from+45];let counts=points.map(t=>shifts.filter(s=>hmToMin(s.start)<=t&&hmToMin(s.end)>t&&!isOnBreak(s,t)).length);let min=Math.min(...counts);let available=shifts.slice();available._minCount=min;return available}
-function renderStaffMatrix(date,rows){if(!$('staffMatrix'))return;let shifts=getShifts().filter(s=>s.date===date);let names=[...new Set(shifts.map(s=>s.name).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ja'));if(!names.length){$('staffMatrix').innerHTML='<div class="matrixempty">この日の登録シフトはありません</div>';return}let head='<thead><tr><th class="timecol">時間</th>'+names.map(n=>`<th class="personhead" title="${esc(n)}">${esc(n)}</th>`).join('')+'</tr></thead>';let body='<tbody>'+rows.map(r=>{let active=new Map(r.people.map(p=>[p.name,p]));let shortage=r.count<r.need;return `<tr class="${shortage?'shortage':''}"><td class="timecol">${String(r.h).padStart(2,'0')}:00<br><span style="font-size:9px;font-weight:400">${r.count}/${r.need}人</span></td>`+names.map(n=>{let p=active.get(n);if(!p)return '<td class="off">－</td>';let br=(p.breaks||[]).some(x=>{let [a,b]=x.split('-').map(hmToMin);return a<(r.h+1)*60&&b>r.h*60});return br?'<td class="working" title="休憩あり">◐</td>':'<td class="working">●</td>'}).join('')+'</tr>'}).join('')+'</tbody>';$('staffMatrix').innerHTML=`<div class="matrixwrap"><table class="staffmatrix">${head}${body}</table></div>`}
-function renderStaffing(resetDetail=true){if(!$('staffDate'))return;if(!$('staffDate').value)$('staffDate').value=new Date().toISOString().slice(0,10);let date=$('staffDate').value,needs=getNeeds(),rows=staffingHours.map(h=>{let people=peopleForHour(date,h);return {h,people,count:people._minCount??people.length,need:needs[h]}});let dayShifts=getShifts().filter(s=>s.date===date),dayNames=[...new Set(dayShifts.map(s=>s.name).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ja'));let shortage=rows.filter(r=>r.count<r.need),max=rows.reduce((a,b)=>b.count>a.count?b:a,rows[0]);$('staffSummary').innerHTML=`<div class="staff-total"><b>${dayNames.length}</b><span>人がこの日に出勤予定</span><div class="names">${dayNames.length?dayNames.map(esc).join('・'):'登録シフトはありません'}</div></div><div class="staff-summary"><div class="metric"><b>${dayShifts.length}</b><span>登録シフト</span></div><div class="metric"><b>${shortage.length}</b><span>不足時間帯</span></div><div class="metric"><b>${max.count}</b><span>最大配置人数</span></div></div>`;if(shortage.length){$('shortageAlert').innerHTML=`<div class="shortage-panel"><h3>⚠️ 先に確認｜人員不足 ${shortage.length}時間帯</h3>${shortage.map(r=>`<div class="shortage-row"><b>${String(r.h).padStart(2,'0')}:00〜${String(r.h+1).padStart(2,'0')}:00</b><span>${r.count}人 ／ 必要${r.need}人</span><span class="shortage-num">${r.need-r.count}人不足</span></div>`).join('')}</div>`}else{$('shortageAlert').innerHTML='<div class="allgood-panel">✓ 設定した必要人数をすべての時間帯で満たしています</div>'}$('hourGrid').innerHTML=rows.map(r=>{let diff=r.count-r.need;let cls=diff>=0?'good':diff===-1?'warn':'bad';let label=diff>=0?'充足':diff===-1?'注意':`${-diff}人不足`;let workers=r.people.length?r.people.map(x=>`<span class="workerchip">${esc(x.name)} <small>${x.start}〜${x.end}</small></span>`).join(''):'<span class="noworker">勤務者なし</span>';return `<div class="hourcard ${cls}"><div class="hourtop"><div class="hourtime">${String(r.h).padStart(2,'0')}:00</div><div class="hourcount"><b>${r.count}</b>人 <span class="muted">／ 必要 ${r.need}人</span></div><div class="statuslabel">${label}</div></div><div class="hourworkers">${workers}</div></div>`}).join('');renderStaffMatrix(date,rows);if(resetDetail)$('workerDetail').innerHTML=''}
-function setStaffView(view){
-  const matrix=view==='matrix';
-  if($('listArea')) $('listArea').classList.toggle('hide',matrix);
-  if($('matrixArea')) $('matrixArea').classList.toggle('hide',!matrix);
-  if($('listViewBtn')) $('listViewBtn').classList.toggle('on',!matrix);
-  if($('matrixViewBtn')) $('matrixViewBtn').classList.toggle('on',matrix);
-  if(matrix) renderStaffing(false);
-}
-if($('listViewBtn')) $('listViewBtn').onclick=()=>setStaffView('list');
-if($('matrixViewBtn')) $('matrixViewBtn').onclick=()=>setStaffView('matrix');
-if($('staffDate'))$('staffDate').onchange=()=>renderStaffing();
-if($('applyDefaultNeed'))$('applyDefaultNeed').onclick=()=>{let v=Math.max(0,Number($('defaultNeed').value||0)),n={};staffingHours.forEach(h=>n[h]=v);saveNeeds(n);renderNeedGrid();renderStaffing();};
+<section id="mypage" class="page on"><div class="card"><h2>♡ マイページ</h2>
+<div id="lineStatus" class="linebox"><span class="statusdot"></span>LINE接続を確認しています...</div>
+<div id="lineUser" class="lineuser"></div>
+<div id="authGate" class="authgate pending">⏳ 社内利用状況を確認しています...</div>
+<div class="summary"><div class="avatar">👤</div><div><b id="profileName">未設定</b><div class="muted" id="profileDept">部署未設定</div></div></div>
+<div id="approvalAdmin" class="approval-admin hide"><h2>👥 従業員承認</h2><p class="sub">管理者のみ表示されています。</p><button class="secondary" id="refreshPending">承認待ちを更新</button><div id="pendingEmployees"></div></div>
+<div class="notice">このアプリでは、本人確認・利用承認・シフト管理に必要な情報のみ利用します。住所、電話番号、生年月日、銀行口座、マイナンバー等の不要な個人情報は収集しません。</div>
+</div></section>
 
-const boardKey='mtBoardV8';
-function getPosts(){return JSON.parse(localStorage.getItem(boardKey)||'[]')}
-function setPosts(x){localStorage.setItem(boardKey,JSON.stringify(x))}
-function renderBoard(){if(!$('boardList'))return;let a=getPosts();if(!a.length){a=[{id:1,title:'社内掲示板を開設しました',body:'今後、重要なお知らせはこちらにも掲載します。内容を確認したら「確認しました」にチェックしてください。',priority:'important',confirmed:false,date:new Date().toISOString().slice(0,10)}];setPosts(a)}$('boardList').innerHTML=a.slice().reverse().map(p=>`<div class="boarditem ${p.priority==='important'?'important':''}"><span class="badge">${p.priority==='important'?'重要':'お知らせ'}</span><b style="display:block;margin:8px 0 4px">${esc(p.title)}</b><div class="muted">${esc(p.date||'')}</div><p style="white-space:pre-wrap">${esc(p.body)}</p><label class="check"><input type="checkbox" ${p.confirmed?'checked':''} onchange="confirmPost(${p.id},this.checked)"><span>確認しました</span></label><div class="muted">確認状況：${p.confirmed?'確認済み 1人':'未確認'}</div></div>`).join('')}
-window.confirmPost=(id,on)=>{let a=getPosts();let p=a.find(x=>x.id===id);if(p)p.confirmed=on;setPosts(a);renderBoard()}
-if($('addPost'))$('addPost').onclick=()=>{let title=$('postTitle').value.trim(),body=$('postBody').value.trim();if(!title||!body){alert('タイトルと内容を入力してください');return}let a=getPosts();a.push({id:Date.now(),title,body,priority:$('postPriority').value,confirmed:false,date:new Date().toISOString().slice(0,10)});setPosts(a);$('postTitle').value='';$('postBody').value='';renderBoard()}
-if($('previewMessage'))$('previewMessage').onclick=()=>{let body=$('messageBody').value.trim();if(!body){alert('メッセージを入力してください');return}$('messagePreview').innerHTML=`<div class="ok"><b>送信先：${esc($('messageTarget').value)}</b><br>${esc(body).replace(/\n/g,'<br>')}<br><span class="muted">※試作版のため実際には送信されません</span></div>`}
+<section id="register" class="page"><div class="card"><h2>＋ シフト登録</h2><p class="sub">勤務日と時間、休憩を選択してください。</p>
+<label>勤務日 <span class="req">*</span></label><input type="date" id="workDate">
+<div class="row"><div><label>開始 <span class="req">*</span></label><input type="time" id="startTime"></div><div><label>終了 <span class="req">*</span></label><input type="time" id="endTime"></div></div>
+<label>休憩</label><div class="checks" id="breakChecks"></div>
+<button class="primary" id="saveShift">シフトを登録</button>
+</div></section>
 
-// LIFF + Supabase Edge Function 認証
-const LINE_AUTH_URL='https://xgkmvmxuwjzbyywanfnq.supabase.co/functions/v1/line-auth';
-let lineReady=false, authState={checked:false,approved:false,status:'unknown',employee:null};
-function lineStatus(msg,connected=false){$('lineStatus').innerHTML='<span class="statusdot '+(connected?'connected':'')+'"></span>'+esc(msg)}
-function setAuthGate(status,message){
-  authState.checked=true; authState.status=status; authState.approved=status==='approved';
-  const gate=$('authGate'); gate.className='authgate '+(authState.approved?'approved':status==='rejected'?'rejected':'pending');
-  gate.innerHTML=authState.approved?'✓ 社内アプリの利用が承認されています':status==='rejected'?'利用申請が承認されていません。管理者へお問い合わせください。':'⏳ '+esc(message||'管理者の承認待ちです。承認後にシフト機能を利用できます。');
-  document.querySelectorAll('.tab').forEach(b=>{if(b.dataset.page!=='mypage')b.classList.toggle('locked',!authState.approved)});
-}
-async function verifyEmployee(){
-  if(!lineReady||!liff.isLoggedIn())return;
-  try{
-    const idToken=liff.getIDToken();
-    if(!idToken){setAuthGate('pending','LINE認証情報を取得できませんでした。もう一度ログインしてください。');return}
-    const res=await fetch(LINE_AUTH_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({idToken})});
-    const data=await res.json().catch(()=>({}));
-    if(!res.ok||data.ok===false){throw new Error(data.error||'認証に失敗しました')}
-    authState.employee=data.employee||null;
-    const status=data.approved===true?'approved':(data.status||data.employee?.approval_status||'pending');
-    setAuthGate(status,data.message);
-    updateAdminUI();
-  }catch(e){console.error(e);setAuthGate('pending','社内認証サーバーに接続できませんでした。管理者へお問い合わせください。')}
-}
+<section id="shifts" class="page"><div class="card"><h2>📅 自分のシフト</h2><p class="sub">登録後の変更・取消は申請制です。実際に働いた時間は「実働入力」から記録できます。</p><div id="shiftList"></div></div></section>
 
-function isAdmin(){
-  return authState.approved && authState.employee && authState.employee.role==='admin';
-}
-function updateAdminUI(){
-  const box=$('approvalAdmin');
-  if(!box)return;
-  box.classList.toggle('hide',!isAdmin());
-  if(isAdmin()) loadPendingEmployees();
-}
-async function callAdmin(action,extra={}){
-  if(!lineReady||!liff.isLoggedIn())throw new Error('LINEログインが必要です');
-  const idToken=liff.getIDToken();
-  if(!idToken)throw new Error('LINE認証情報を取得できません');
-  const res=await fetch(LINE_AUTH_URL,{
-    method:'POST',
-    headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({idToken,action,...extra})
-  });
-  const data=await res.json().catch(()=>({}));
-  if(!res.ok||data.ok===false)throw new Error(data.error||'処理に失敗しました');
-  return data;
-}
-async function loadPendingEmployees(){
-  if(!isAdmin())return;
-  const area=$('pendingEmployees');
-  area.innerHTML='<div class="muted">読み込み中...</div>';
-  try{
-    const data=await callAdmin('list_pending');
-    const rows=data.employees||[];
-    if(!rows.length){
-      area.innerHTML='<div class="ok">現在、承認待ちの従業員はいません。</div>';
-      return;
-    }
-    area.innerHTML=rows.map(e=>`<div class="approval-row">
-      <b>${esc(e.name||'名前未登録')}</b>
-      <div class="muted">${e.department?esc(e.department)+' ／ ':''}申請日時：${esc((e.created_at||'').replace('T',' ').slice(0,16))}</div>
-      <div class="approval-actions">
-        <button class="approve-btn" onclick="decideEmployee('${e.id}','approved')">✓ 承認</button>
-        <button class="reject-btn" onclick="decideEmployee('${e.id}','rejected')">却下</button>
-      </div>
-    </div>`).join('');
-  }catch(e){
-    console.error(e);
-    area.innerHTML='<div class="authgate rejected">'+esc(e.message)+'</div>';
-  }
-}
-window.decideEmployee=async(id,status)=>{
-  const label=status==='approved'?'承認':'却下';
-  if(!confirm('この従業員を'+label+'しますか？'))return;
-  try{
-    await callAdmin('set_approval',{employeeId:id,status});
-    await loadPendingEmployees();
-    alert(label+'しました');
-  }catch(e){alert(e.message)}
-};
-if($('refreshPending'))$('refreshPending').onclick=()=>loadPendingEmployees();
+<section id="staffing" class="page"><div class="card"><h2>▥ 人員配置</h2><p class="sub">時間帯ごとの配置人数と不足状況を確認できます。</p>
+<label>確認する日</label><input type="date" id="staffDate">
+<button class="secondary" id="refreshStaffing">🔄 最新の人員配置を更新</button>
+<div id="staffSummary"></div><div id="shortageAlert"></div>
+<div class="viewtoggle"><button class="viewbtn on" id="listViewBtn">時間別</button><button class="viewbtn" id="matrixViewBtn">マトリクス</button></div>
+<div id="listArea"><div id="hourGrid" class="hourgrid"></div></div>
+<div id="matrixArea" class="hide"><div id="staffMatrix"></div></div>
+<div id="workerDetail"></div>
+<div class="adminbox"><b>必要人数設定</b><div class="row"><div><label>一括設定</label><input type="number" id="defaultNeed" min="0" value="3"></div><div style="display:flex;align-items:end"><button class="secondary" id="applyDefaultNeed">全時間へ反映</button></div></div><div id="needGrid" class="needgrid"></div></div>
+<div id="adminShiftArea" class="adminbox hide"><b>管理者用｜登録シフト</b><div id="adminShiftList" class="admin-shift-list"></div>
+<div class="csv-actions"><button class="secondary" id="csvDay">この日をCSV</button><button class="secondary" id="csvRange">期間CSV</button></div>
+<div class="range-row"><div><label>開始日</label><input type="date" id="csvFrom"></div><div><label>終了日</label><input type="date" id="csvTo"></div></div>
+<div id="adminRequestPanel" class="request-admin-panel"><b>変更・取消申請</b><button class="secondary" id="refreshRequests">申請を更新</button><div id="adminRequestList"></div></div>
+</div></div></section>
 
-async function initLine(){const id=localStorage.getItem('mtLiffId')||'';$('liffId').value=id;if(!id){lineStatus('LIFF ID未設定・デモモード');return}if(typeof liff==='undefined'){lineStatus('LINE SDKを読み込めません（ネット接続をご確認ください）');return}try{await liff.init({liffId:id});lineReady=true;if(liff.isLoggedIn()){const p=await liff.getProfile();lineStatus('LINEログイン済み',true);$('lineUser').innerHTML=(p.pictureUrl?'<img src="'+esc(p.pictureUrl)+'" alt="">':'')+esc(p.displayName);await verifyEmployee();}else{lineStatus('LINEログイン待ち');setAuthGate('pending','LINEでログインしてください。')}}catch(e){lineStatus('接続エラー：LIFF IDと公開URLを確認してください');console.error(e)}}
-$('saveLiff').onclick=()=>{const id=$('liffId').value.trim();if(!/^[0-9]+-[A-Za-z0-9_-]+$/.test(id)){alert('正しいLIFF IDを入力してください');return}localStorage.setItem('mtLiffId',id);location.reload()};
-$('lineLogin').onclick=async()=>{if(!lineReady){alert('LIFF IDを設定し、HTTPSで公開したアプリから開いてください');return}if(!liff.isLoggedIn())liff.login({redirectUri:location.href});else{await verifyEmployee();alert(authState.approved?'LINEログイン・社内認証済みです':'LINEログイン済みです。現在は管理者の承認待ちです')}};
-$('lineLogout').onclick=()=>{if(lineReady&&liff.isLoggedIn()){liff.logout();location.reload()}else alert('ログインしていません')};
-$('shareLine').onclick=async()=>{const body=$('messageBody').value.trim();if(!body){alert('共有するメッセージを入力してください');return}if(!lineReady||!liff.isLoggedIn()){alert('LINEログイン後に利用できます');return}try{if(!liff.isApiAvailable('shareTargetPicker')){alert('この環境ではLINE共有に対応していません');return}await liff.shareTargetPicker([{type:'text',text:body}])}catch(e){alert('LINE共有を完了できませんでした')}};
+<section id="board" class="page"><div class="card"><h2>掲示板</h2><div id="boardList"></div>
+<div class="adminbox"><b>管理者用｜お知らせ作成</b><label>タイトル</label><input id="postTitle"><label>内容</label><textarea id="postBody"></textarea><label>種類</label><select id="postPriority"><option value="normal">通常</option><option value="important">重要</option></select><button class="primary" id="addPost">掲示板へ掲載</button></div>
+<div class="adminbox"><b>LINE共有用メッセージ</b><label>送信先</label><select id="messageTarget"><option>全従業員</option><option>出荷</option><option>入荷</option><option>リフト</option></select><label>本文</label><textarea id="messageBody"></textarea><button class="secondary" id="previewMessage">内容を確認</button><div id="messagePreview"></div></div>
+</div></section>
+</div>
 
-// ===== v20 共有シフト・承認制変更・実働・CSV =====
+<script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const LIFF_ID='2011979112-zRK9twVc';
 const SHIFT_API_URL='https://xgkmvmxuwjzbyywanfnq.supabase.co/functions/v1/shift-api';
-let sharedMyShifts=[];
-let sharedDayShifts=[];
-let sharedDayDate='';
 
-function cleanTime(v){return String(v||'').slice(0,5)}
-function normalizeShift(row){
-  const br=(row.shift_breaks||[]).map(b=>`${cleanTime(b.start_time)}-${cleanTime(b.end_time)}`);
+const breakOptions=[
+['none','休憩なし'],
+['10:30-10:45','10:30〜10:45'],
+['12:00-12:15','12:00〜12:15'],
+['12:00-12:30','12:00〜12:30'],
+['12:00-12:45','12:00〜12:45'],
+['12:00-13:00','12:00〜13:00'],
+['15:00-15:15','15:00〜15:15'],
+['17:45-18:00','17:45〜18:00'],
+['20:00-22:00','20:00〜22:00']
+];
+const lunchBreaks=['12:00-12:15','12:00-12:30','12:00-12:45','12:00-13:00'];let lineProfile=null;
+let lineIdToken=null;
+let currentEmployee=null;
+let currentShifts=[];
+let staffShifts=[];
+let currentRequests=[];
+let selectedStaffView='list';
+
+function localDateStr(d=new Date()){
+  const y=d.getFullYear();
+  const m=String(d.getMonth()+1).padStart(2,'0');
+  const day=String(d.getDate()).padStart(2,'0');
+  return `${y}-${m}-${day}`;
+}
+
+function shortDate(dateStr){
+  if(!dateStr)return '';
+  const d=new Date(dateStr+'T00:00:00');
+  const days=['日','月','火','水','木','金','土'];
+  return `${d.getMonth()+1}/${d.getDate()}（${days[d.getDay()]}）`;
+}
+
+function hm(v){
+  if(!v)return '';
+  return String(v).slice(0,5);
+}
+
+function minutes(t){
+  if(!t)return 0;
+  const p=String(t).slice(0,5).split(':').map(Number);
+  return p[0]*60+p[1];
+}
+
+function durationText(start,end,breaks=[]){
+  let total=minutes(end)-minutes(start);
+  if(total<0)total+=24*60;
+
+  (breaks||[]).forEach(b=>{
+    const bs=minutes(b.start_time);
+    const be=minutes(b.end_time);
+    if(be>bs)total-=be-bs;
+  });
+
+  total=Math.max(0,total);
+  const h=Math.floor(total/60);
+  const m=total%60;
+  return `${h}時間${m?m+'分':''}`;
+}
+
+function formatBreaks(arr=[]){
+  if(!arr || !arr.length)return 'なし';
+  return arr
+    .map(b=>`${hm(b.start_time)}-${hm(b.end_time)}`)
+    .join('・');
+}
+
+function selectedBreakValues(container){
+  return [...container.querySelectorAll('input[type="checkbox"]:checked')]
+    .map(x=>x.value)
+    .filter(v=>v!=='none');
+}
+
+function renderBreakChecks(containerId,selected=[]){
+  const box=$(containerId);
+  if(!box)return;
+
+  box.innerHTML=breakOptions.map(([value,label])=>`
+    <label class="check">
+      <input type="checkbox"
+        value="${value}"
+        ${selected.includes(value)?'checked':''}>
+      <span>${label}</span>
+    </label>
+  `).join('');
+
+  box.querySelectorAll('input[type="checkbox"]').forEach(cb=>{
+    cb.addEventListener('change',()=>{
+      const all=[...box.querySelectorAll('input[type="checkbox"]')];
+
+      if(cb.value==='none' && cb.checked){
+        all.forEach(x=>{
+          if(x!==cb)x.checked=false;
+        });
+      }
+
+      if(cb.value!=='none' && cb.checked){
+        const none=box.querySelector('input[value="none"]');
+        if(none)none.checked=false;
+      }
+
+      if(lunchBreaks.includes(cb.value) && cb.checked){
+        all.forEach(x=>{
+          if(
+            x!==cb &&
+            lunchBreaks.includes(x.value)
+          ){
+            x.checked=false;
+          }
+        });
+      }
+    });
+  });
+}
+
+function normalizeShift(s){
+  const actualRaw=Array.isArray(s.shift_actuals)
+    ? s.shift_actuals[0]
+    : s.shift_actuals;
+
+  const requests=Array.isArray(s.shift_change_requests)
+    ? s.shift_change_requests
+    : [];
+
   return {
-    id:row.id,
-    name:row.employees?.name || authState.employee?.name || getProfile().name || '従業員',
-    date:row.work_date,
-    start:cleanTime(row.start_time),
-    end:cleanTime(row.end_time),
-    breaks:br,
-    breakMin:String(breakMinutes(br)),
-    department:row.employees?.department || authState.employee?.department || '',
-    actual:(row.shift_actuals&&row.shift_actuals[0]) ? {
-      id:row.shift_actuals[0].id,
-      start:cleanTime(row.shift_actuals[0].actual_start_time),
-      end:cleanTime(row.shift_actuals[0].actual_end_time),
-      breaks:(row.shift_actuals[0].shift_actual_breaks||[]).map(b=>`${cleanTime(b.start_time)}-${cleanTime(b.end_time)}`)
-    } : null,
-    requests:(row.shift_change_requests||[]).map(r=>({
-      id:r.id,type:r.request_type,status:r.status,reason:r.reason||'',
-      start:cleanTime(r.requested_start_time),end:cleanTime(r.requested_end_time),
-      breaks:(r.shift_change_request_breaks||[]).map(b=>`${cleanTime(b.start_time)}-${cleanTime(b.end_time)}`)
-    }))
+    ...s,
+    shift_breaks:s.shift_breaks||[],
+    actual:actualRaw||null,
+    requests
   };
 }
-async function callShiftApi(action,extra={}){
-  if(!lineReady||!liff.isLoggedIn())throw new Error('LINEログインが必要です');
-  const idToken=liff.getIDToken();
-  if(!idToken)throw new Error('LINE認証情報を取得できません');
+
+async function callShiftApi(action,data={}){
+  if(!lineIdToken){
+    throw new Error('LINE認証情報がありません');
+  }
+
   const res=await fetch(SHIFT_API_URL,{
     method:'POST',
-    headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({idToken,action,...extra})
+    headers:{
+      'Content-Type':'application/json'
+    },
+    body:JSON.stringify({
+      action,
+      idToken:lineIdToken,
+      ...data
+    })
   });
-  const data=await res.json().catch(()=>({}));
-  if(!res.ok||data.ok===false)throw new Error(data.error||'シフト処理に失敗しました');
-  return data;
-}
-async function loadMySharedShifts(){
-  const data=await callShiftApi('list_my');
-  sharedMyShifts=(data.shifts||[]).map(normalizeShift).sort((a,b)=>a.date.localeCompare(b.date)||a.start.localeCompare(b.start));
-  return sharedMyShifts;
-}
-async function loadDaySharedShifts(date){
-  if(!isAdmin())throw new Error('人員配置は管理者のみ確認できます');
-  const data=await callShiftApi('list_day',{workDate:date});
-  sharedDayShifts=(data.shifts||[]).map(normalizeShift);
-  sharedDayDate=date;
-  return sharedDayShifts;
+
+  let result={};
+
+  try{
+    result=await res.json();
+  }catch(e){
+    throw new Error('サーバーから正しい応答がありません');
+  }
+
+  if(!res.ok || result.ok===false){
+    throw new Error(result.error||'処理に失敗しました');
+  }
+
+  return result;
 }
 
-$('addShift').onclick=async()=>{
-  const breaks=selectedBreaks();
-  const workDate=$('workDate').value,startTime=$('start').value,endTime=$('end').value;
-  if(!workDate||!startTime||!endTime){alert('勤務日・出勤時間・退勤時間を入力してください');return}
-  if(hmToMin(endTime)<=hmToMin(startTime)){alert('退勤時間は出勤時間より後にしてください');return}
-  const btn=$('addShift'); btn.disabled=true; btn.textContent='登録中...';
-  try{
-    await callShiftApi('create',{workDate,startTime,endTime,breaks});
-    $('shiftMsg').innerHTML='<div class="ok">✓ シフトを共有データベースに登録しました</div>';
-    await loadMySharedShifts();
-  }catch(e){
-    $('shiftMsg').innerHTML='<div class="authgate rejected">'+esc(e.message)+'</div>';
-  }finally{
-    btn.disabled=false; btn.textContent='このシフトを登録';
-  }
-};
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>{
+    p.classList.toggle('on',p.id===id);
+  });
 
-function minutesBetween(start,end){
-  if(!start||!end)return 0;
-  return Math.max(0,hmToMin(end)-hmToMin(start));
-}
-function actualMinutes(a){
-  if(!a)return 0;
-  return Math.max(0,minutesBetween(a.start,a.end)-breakMinutes(a.breaks||[]));
-}
-function minText(m){
-  if(!m)return '0分';
-  const h=Math.floor(m/60),mm=m%60;
-  return h ? `${h}時間${mm?mm+'分':''}` : `${mm}分`;
-}
-async function renderShifts(){
-  if(!$('shiftList'))return;
-  $('shiftList').innerHTML='<div class="empty">読み込み中...</div>';
-  try{
-    await loadMySharedShifts();
-    if(!sharedMyShifts.length){$('shiftList').innerHTML='<div class="empty">登録済みシフトはありません</div>';return}
-    $('shiftList').innerHTML=sharedMyShifts.map(s=>{
-      const pending=(s.requests||[]).find(r=>r.status==='pending');
-      const actual=s.actual
-        ? `<div class="ok"><b>実績 ${s.actual.start}〜${s.actual.end}</b><br>実績休憩：${s.actual.breaks.length?s.actual.breaks.join('・'):'なし'}<br><b>実働：${minText(actualMinutes(s.actual))}</b></div>`
-        : `<div class="notice">実働はまだ入力されていません。</div>`;
-      const pendingHtml=pending
-        ? `<div class="notice"><b>申請中：</b>${pending.type==='cancel'?'取消申請':`変更 ${pending.start}〜${pending.end}`} ${pending.reason?'／理由：'+esc(pending.reason):''}</div>`
-        : '';
-      return `<div class="shift"><b>${fmtDate(s.date)}　${esc(s.name)}</b>
-        <div class="muted">予定 ${s.start}〜${s.end} ／ 休憩：${s.breaks.length?s.breaks.join('・'):'なし'}</div>
-        ${actual}${pendingHtml}
-        <div class="actions">
-          <button class="mini" onclick="openCopyShared('${s.id}')">✓ 複写</button>
-          <button class="mini" onclick="saveActualUi('${s.id}')">実働入力</button>
-          ${pending?'':`<button class="mini" onclick="requestChangeUi('${s.id}')">変更申請</button><button class="mini" onclick="requestCancelUi('${s.id}')">取消申請</button>`}
-        </div><div id="copy-${s.id}"></div></div>`;
-    }).join('');
-  }catch(e){
-    $('shiftList').innerHTML='<div class="authgate rejected">'+esc(e.message)+'</div>';
+  document.querySelectorAll('.tab').forEach(b=>{
+    b.classList.toggle('on',b.dataset.page===id);
+  });
+
+  if(id==='shifts'){
+    loadMyShifts();
+  }
+
+  if(id==='staffing' && currentEmployee?.role==='admin'){
+    loadStaffing();
+  }
+
+  if(id==='board'){
+    renderBoard();
   }
 }
-window.requestChangeUi=async id=>{
-  const s=sharedMyShifts.find(x=>String(x.id)===String(id)); if(!s)return;
-  const start=prompt('変更後の出勤時間（例 09:00）',s.start); if(start===null)return;
-  const end=prompt('変更後の退勤時間（例 17:45）',s.end); if(end===null)return;
-  const breaksText=prompt('変更後の休憩（複数はカンマ区切り）\n例：10:30-10:45,12:00-13:00',s.breaks.join(',')); if(breaksText===null)return;
-  const reason=prompt('変更理由を入力してください','') ?? '';
-  const breaks=breaksText.split(',').map(x=>x.trim()).filter(Boolean);
-  try{await callShiftApi('request_change',{shiftId:id,startTime:start,endTime:end,breaks,reason});alert('変更申請を送りました');await renderShifts()}
-  catch(e){alert(e.message)}
-};
-window.requestCancelUi=async id=>{
-  const reason=prompt('取消理由を入力してください',''); if(reason===null)return;
-  if(!confirm('このシフトの取消申請を送りますか？'))return;
-  try{await callShiftApi('request_cancel',{shiftId:id,reason});alert('取消申請を送りました');await renderShifts()}
-  catch(e){alert(e.message)}
-};
-window.saveActualUi=async id=>{
-  const s=sharedMyShifts.find(x=>String(x.id)===String(id)); if(!s)return;
-  const host=document.querySelector(`#copy-${CSS.escape(String(id))}`); if(!host)return;
-  const actual=s.actual||{start:s.start,end:s.end,breaks:s.breaks||[]};
-  host.innerHTML=`<div class="copybox"><b>⏱ 実働入力</b><div class="muted" style="margin-top:5px">実際に働いた出勤・退勤時間と休憩を入力してください。</div>
-    <div class="row"><div><label>実際の出勤</label><input type="time" id="actualStart-${id}" value="${esc(actual.start)}"></div><div><label>実際の退勤</label><input type="time" id="actualEnd-${id}" value="${esc(actual.end)}"></div></div>
-    <label>実際の休憩</label><input id="actualBreaks-${id}" value="${esc((actual.breaks||[]).join(','))}" placeholder="例 10:30-10:45,12:00-13:00">
-    <div class="muted" style="margin-top:6px">複数ある場合はカンマ区切りで入力します。</div>
-    <button class="primary" id="actualSave-${id}">実働を保存</button></div>`;
-  $(`actualSave-${id}`).onclick=async()=>{
-    const start=$(`actualStart-${id}`).value,end=$(`actualEnd-${id}`).value;
-    const breaks=$(`actualBreaks-${id}`).value.split(',').map(x=>x.trim()).filter(Boolean);
-    if(!start||!end){alert('実際の出勤時間・退勤時間を入力してください');return}
-    if(hmToMin(end)<=hmToMin(start)){alert('退勤時間は出勤時間より後にしてください');return}
-    const btn=$(`actualSave-${id}`);btn.disabled=true;btn.textContent='保存中...';
-    try{await callShiftApi('save_actual',{shiftId:id,actualStartTime:start,actualEndTime:end,breaks});alert('実働を保存しました');await renderShifts()}
-    catch(e){alert(e.message);btn.disabled=false;btn.textContent='実働を保存'}
-  };
-};
-window.openCopyShared=id=>{
-  const s=sharedMyShifts.find(x=>String(x.id)===String(id)),box=$('copy-'+id);
-  if(!s||!box)return;
-  const base=new Date(s.date+'T00:00:00');let days=[];
-  for(let i=1;i<=14;i++){let d=new Date(base);d.setDate(d.getDate()+i);let iso=d.toISOString().slice(0,10);days.push(`<label class="check"><input type="checkbox" class="copyday-shared" value="${iso}"><span>${fmtDate(iso)}</span></label>`)}
-  box.innerHTML=`<div class="copybox"><b>複写する日を選択</b><div class="muted">レ点を入れた日だけ複写します</div><div class="actions"><button class="mini" onclick="document.querySelectorAll('.copyday-shared').forEach(x=>x.checked=true)">すべて選択</button><button class="mini" onclick="document.querySelectorAll('.copyday-shared').forEach(x=>x.checked=false)">すべて解除</button></div><div class="checks">${days.join('')}</div><button class="primary" onclick="copySharedSelected('${id}')">✓ 選択した日に複写</button></div>`;
-};
-window.copySharedSelected=async id=>{
-  const src=sharedMyShifts.find(x=>String(x.id)===String(id));
-  const dates=[...document.querySelectorAll('.copyday-shared:checked')].map(x=>x.value);
-  if(!src||!dates.length){alert('複写する日を選択してください');return}
+
+document.querySelectorAll('.tab').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    showPage(btn.dataset.page);
+  });
+});
+
+async function initLine(){
   try{
-    for(const workDate of dates){
-      await callShiftApi('create',{workDate,startTime:src.start,endTime:src.end,breaks:src.breaks});
+    await liff.init({
+      liffId:LIFF_ID
+    });
+
+    if(!liff.isLoggedIn()){
+      liff.login();
+      return;
     }
-    await renderShifts();
-    alert(dates.length+'日分を複写しました');
-  }catch(e){alert(e.message)}
+
+    lineIdToken=liff.getIDToken();
+
+    if(!lineIdToken){
+      throw new Error('LINE IDトークンを取得できませんでした');
+    }
+
+    lineProfile=await liff.getProfile();
+
+    $('lineStatus').innerHTML=
+      `<span class="statusdot connected"></span>LINE接続済み`;
+
+    $('lineUser').innerHTML=`
+      ${lineProfile.pictureUrl
+        ? `<img src="${esc(lineProfile.pictureUrl)}">`
+        : ''}
+      ${esc(lineProfile.displayName||'LINEユーザー')}
+    `;
+
+    await loadEmployeeStatus();
+
+  }catch(err){
+    console.error(err);
+
+    $('lineStatus').innerHTML=
+      `<span class="statusdot"></span>LINE接続エラー`;
+
+    $('authGate').className='authgate rejected';
+    $('authGate').textContent=
+      err.message||'LINE認証に失敗しました';
+  }
+}
+
+async function loadEmployeeStatus(){
+  try{
+    const result=await callLineAuth();
+
+    currentEmployee=result.employee||null;
+
+    if(!currentEmployee){
+      $('authGate').className='authgate pending';
+      $('authGate').textContent=
+        '⏳ 初回登録を受け付けました。管理者の承認をお待ちください。';
+
+      $('profileName').textContent=
+        lineProfile?.displayName||'未設定';
+
+      $('profileDept').textContent='承認待ち';
+
+      lockPages(true);
+      return;
+    }
+
+    $('profileName').textContent=
+      currentEmployee.name||
+      lineProfile?.displayName||
+      '未設定';
+
+    $('profileDept').textContent=
+      currentEmployee.department||
+      '部署未設定';
+
+    const status=currentEmployee.approval_status;
+
+    if(status==='approved'){
+      $('authGate').className='authgate approved';
+      $('authGate').innerHTML=
+        `✓ 社内利用承認済み${
+          currentEmployee.role==='admin'
+            ? '<span class="admin-tag">管理者</span>'
+            : ''
+        }`;
+
+      lockPages(false);
+
+      if(currentEmployee.role==='admin'){
+        $('approvalAdmin').classList.remove('hide');
+        $('adminShiftArea').classList.remove('hide');
+        await loadPendingEmployees();
+      }else{
+        $('approvalAdmin').classList.add('hide');
+        $('adminShiftArea').classList.add('hide');
+      }
+
+      await loadMyShifts();
+      return;
+    }
+
+    if(status==='rejected'){
+      $('authGate').className='authgate rejected';
+      $('authGate').textContent=
+        '利用申請が承認されていません。管理者へ確認してください。';
+
+      lockPages(true);
+      return;
+    }
+
+    $('authGate').className='authgate pending';
+    $('authGate').textContent=
+      '⏳ 管理者の承認待ちです。';
+
+    lockPages(true);
+
+  }catch(err){
+    console.error(err);
+
+    $('authGate').className='authgate rejected';
+    $('authGate').textContent=
+      err.message||'従業員情報を確認できませんでした';
+
+    lockPages(true);
+  }
+}
+
+async function callLineAuth(){
+  const url=
+    'https://xgkmvmxuwjzbyywanfnq.supabase.co/functions/v1/line-auth';
+
+  const res=await fetch(url,{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json'
+    },
+    body:JSON.stringify({
+      idToken:lineIdToken,
+      displayName:lineProfile?.displayName||''
+    })
+  });
+
+  const result=await res.json();
+
+  if(!res.ok){
+    throw new Error(
+      result.error||
+      'LINE利用者情報を確認できません'
+    );
+  }
+
+  return result;
+}
+
+function lockPages(locked){
+  document.querySelectorAll(
+    '.tab[data-page="register"],.tab[data-page="shifts"],.tab[data-page="staffing"]'
+  ).forEach(btn=>{
+    btn.disabled=locked;
+    btn.style.opacity=locked?'.35':'1';
+  });
+}
+
+async function loadPendingEmployees(){
+  if(currentEmployee?.role!=='admin')return;
+
+  const box=$('pendingEmployees');
+  box.innerHTML=
+    '<div class="muted">読み込み中...</div>';
+
+  try{
+    const url=
+      'https://xgkmvmxuwjzbyywanfnq.supabase.co/functions/v1/employee-admin';
+
+    const res=await fetch(url,{
+      method:'POST',
+      headers:{
+        'Content-Type':'application/json'
+      },
+      body:JSON.stringify({
+        action:'list_pending',
+        idToken:lineIdToken
+      })
+    });
+
+    const result=await res.json();
+
+    if(!res.ok){
+      throw new Error(
+        result.error||'承認待ちを取得できません'
+      );
+    }
+
+    const rows=
+      result.employees||
+      result.pending||
+      [];
+
+    if(!rows.length){
+      box.innerHTML=
+        '<div class="ok">現在、承認待ちの従業員はいません。</div>';
+      return;
+    }
+
+    box.innerHTML=rows.map(e=>`
+      <div class="approval-row">
+        <b>${esc(e.name||'名称未設定')}</b>
+        <div class="muted">
+          ${esc(e.department||'部署未設定')}
+        </div>
+        <div class="approval-actions">
+          <button class="approve-btn"
+            onclick="approveEmployee('${e.id}')">
+            承認
+          </button>
+          <button class="reject-btn"
+            onclick="rejectEmployee('${e.id}')">
+            却下
+          </button>
+        </div>
+      </div>
+    `).join('');
+
+  }catch(err){
+    box.innerHTML=
+      `<div class="notice">${esc(err.message)}</div>`;
+  }
+}
+
+async function employeeAdminAction(action,employeeId){
+  const url=
+    'https://xgkmvmxuwjzbyywanfnq.supabase.co/functions/v1/employee-admin';
+
+  const res=await fetch(url,{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json'
+    },
+    body:JSON.stringify({
+      action,
+      idToken:lineIdToken,
+      employeeId
+    })
+  });
+
+  const result=await res.json();
+
+  if(!res.ok){
+    throw new Error(
+      result.error||'処理できませんでした'
+    );
+  }
+
+  return result;
+}
+
+window.approveEmployee=async function(id){
+  try{
+    await employeeAdminAction('approve',id);
+    alert('承認しました');
+    await loadPendingEmployees();
+  }catch(err){
+    alert(err.message);
+  }
 };
 
-function peopleForHourShared(h){
-  const from=h*60,to=(h+1)*60;
-  const shifts=sharedDayShifts.filter(s=>hmToMin(s.start)<to&&hmToMin(s.end)>from).sort((a,b)=>a.start.localeCompare(b.start));
-  const points=[from,from+15,from+30,from+45];
-  const counts=points.map(t=>shifts.filter(s=>hmToMin(s.start)<=t&&hmToMin(s.end)>t&&!isOnBreak(s,t)).length);
-  const available=shifts.slice(); available._minCount=counts.length?Math.min(...counts):0; return available;
-}
-function renderStaffMatrixShared(rows){
-  if(!$('staffMatrix'))return;
-  const names=[...new Set(sharedDayShifts.map(s=>s.name).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ja'));
-  if(!names.length){$('staffMatrix').innerHTML='<div class="matrixempty">この日の登録シフトはありません</div>';return}
-  const head='<thead><tr><th class="timecol">時間</th>'+names.map(n=>`<th class="personhead" title="${esc(n)}">${esc(n)}</th>`).join('')+'</tr></thead>';
-  const body='<tbody>'+rows.map(r=>{let active=new Map(r.people.map(p=>[p.name,p]));let shortage=r.count<r.need;return `<tr class="${shortage?'shortage':''}"><td class="timecol">${String(r.h).padStart(2,'0')}:00<br><span style="font-size:9px;font-weight:400">${r.count}/${r.need}人</span></td>`+names.map(n=>{let p=active.get(n);if(!p)return '<td class="off">－</td>';let br=(p.breaks||[]).some(x=>{let [a,b]=x.split('-').map(hmToMin);return a<(r.h+1)*60&&b>r.h*60});return br?'<td class="working" title="休憩あり">◐</td>':'<td class="working">●</td>'}).join('')+'</tr>'}).join('')+'</tbody>';
-  $('staffMatrix').innerHTML=`<div class="matrixwrap"><table class="staffmatrix">${head}${body}</table></div>`;
-}
-async function renderRequests(){
-  if(!$('requestList'))return;
-  if(!isAdmin()){$('requestList').innerHTML='';return}
+window.rejectEmployee=async function(id){
+  if(!confirm('この利用申請を却下しますか？'))return;
+
   try{
-    const data=await callShiftApi('list_requests');
-    const a=data.requests||[];
-    if(!a.length){$('requestList').innerHTML='<div class="empty">承認待ちの申請はありません</div>';return}
-    $('requestList').innerHTML=a.map(r=>{
-      const emp=r.employees||{},s=r.shifts||{};
-      const oldBreaks=(s.shift_breaks||[]).map(b=>`${cleanTime(b.start_time)}-${cleanTime(b.end_time)}`).join('・')||'なし';
-      const newBreaks=(r.shift_change_request_breaks||[]).map(b=>`${cleanTime(b.start_time)}-${cleanTime(b.end_time)}`).join('・')||'なし';
-      const detail=r.request_type==='cancel'
-        ? `<div class="muted">取消申請 ／ 現在 ${cleanTime(s.start_time)}〜${cleanTime(s.end_time)} ／ 休憩 ${oldBreaks}</div>`
-        : `<div class="muted">現在 ${cleanTime(s.start_time)}〜${cleanTime(s.end_time)} → <b>変更 ${cleanTime(r.requested_start_time)}〜${cleanTime(r.requested_end_time)}</b><br>変更後休憩：${newBreaks}</div>`;
-      return `<div class="shift"><b>${esc(emp.name||'')}　${s.work_date?fmtDate(s.work_date):''}</b>${detail}
-        ${r.reason?`<div class="notice">理由：${esc(r.reason)}</div>`:''}
-        <div class="actions"><button class="primary" style="margin:0" onclick="reviewRequest('${r.id}','approve')">承認</button><button class="secondary" style="margin:0" onclick="reviewRequest('${r.id}','reject')">却下</button></div></div>`;
-    }).join('');
-  }catch(e){$('requestList').innerHTML='<div class="authgate rejected">'+esc(e.message)+'</div>'}
-}
-window.reviewRequest=async(id,mode)=>{
-  if(!confirm(mode==='approve'?'この申請を承認しますか？':'この申請を却下しますか？'))return;
-  try{
-    await callShiftApi(mode==='approve'?'approve_request':'reject_request',{requestId:id});
-    sharedDayDate=''; await renderRequests(); await renderStaffing(false);
-  }catch(e){alert(e.message)}
+    await employeeAdminAction('reject',id);
+    alert('却下しました');
+    await loadPendingEmployees();
+  }catch(err){
+    alert(err.message);
+  }
 };
 
-async function renderStaffing(resetDetail=true){
-  if(!$('staffDate'))return;
-  if(!$('staffDate').value)$('staffDate').value=new Date().toISOString().slice(0,10);
-  if(!isAdmin()){
-    $('staffSummary').innerHTML='<div class="notice">人員配置は管理者のみ確認できます。</div>';
-    $('shortageAlert').innerHTML='';$('hourGrid').innerHTML='';$('staffMatrix').innerHTML='';if($('adminShiftList'))$('adminShiftList').innerHTML='';
+$('refreshPending').addEventListener(
+  'click',
+  loadPendingEmployees
+);
+
+function initRegister(){
+  $('workDate').value=localDateStr();
+
+  renderBreakChecks('breakChecks',[
+    '10:30-10:45',
+    '12:00-13:00',
+    '15:00-15:15'
+  ]);
+
+  $('saveShift').addEventListener('click',async()=>{
+    const workDate=$('workDate').value;
+    const startTime=$('startTime').value;
+    const endTime=$('endTime').value;
+    const breaks=selectedBreakValues(
+      $('breakChecks')
+    );
+
+    if(!workDate||!startTime||!endTime){
+      alert('勤務日・開始・終了を入力してください');
+      return;
+    }
+
+    if(minutes(endTime)<=minutes(startTime)){
+      alert('終了時間を開始時間より後にしてください');
+      return;
+    }
+
+    try{
+      $('saveShift').disabled=true;
+      $('saveShift').textContent='登録中...';
+
+      await callShiftApi('create',{
+        workDate,
+        startTime,
+        endTime,
+        breaks
+      });
+
+      alert('シフトを登録しました');
+
+      await loadMyShifts();
+      showPage('shifts');
+
+    }catch(err){
+      alert(err.message);
+    }finally{
+      $('saveShift').disabled=false;
+      $('saveShift').textContent='シフトを登録';
+    }
+  });
+}
+
+async function loadMyShifts(){
+  if(
+    !lineIdToken ||
+    currentEmployee?.approval_status!=='approved'
+  ){
     return;
   }
-  const date=$('staffDate').value;
-  $('staffSummary').innerHTML='<div class="empty">読み込み中...</div>';
-  await renderRequests();
+
+  const box=$('shiftList');
+
+  box.innerHTML=
+    '<div class="empty">読み込み中...</div>';
+
   try{
-    await loadDaySharedShifts(date);
-    const needs=getNeeds(),rows=staffingHours.map(h=>{let people=peopleForHourShared(h);return {h,people,count:people._minCount??people.length,need:needs[h]}});
-    const dayNames=[...new Set(sharedDayShifts.map(s=>s.name).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ja'));
-    const shortage=rows.filter(r=>r.count<r.need),max=rows.reduce((a,b)=>b.count>a.count?b:a,rows[0]);
-    $('staffSummary').innerHTML=`<div class="staff-total"><b>${dayNames.length}</b><span>人がこの日に出勤予定</span><div class="names">${dayNames.length?dayNames.map(esc).join('・'):'登録シフトはありません'}</div></div><div class="staff-summary"><div class="metric"><b>${sharedDayShifts.length}</b><span>登録シフト</span></div><div class="metric"><b>${shortage.length}</b><span>不足時間帯</span></div><div class="metric"><b>${max.count}</b><span>最大配置人数</span></div></div>`;
-    if($('adminShiftList')){$('adminShiftList').innerHTML=sharedDayShifts.length?sharedDayShifts.slice().sort((a,b)=>a.start.localeCompare(b.start)||a.name.localeCompare(b.name,'ja')).map(s=>`<div class="shift"><b>${esc(s.name)}</b>${s.department?` <span class="pill">${esc(s.department)}</span>`:''}<div class="muted">予定 ${s.start}〜${s.end} ／ 休憩：${s.breaks.length?s.breaks.join('・'):'なし'}</div>${s.actual?`<div class="ok">実績 ${s.actual.start}〜${s.actual.end} ／ 休憩：${s.actual.breaks.length?s.actual.breaks.join('・'):'なし'} ／ <b>実働 ${minText(actualMinutes(s.actual))}</b></div>`:'<div class="notice">実働未入力</div>'}</div>`).join(''):'<div class="empty">この日の登録シフトはありません</div>'; }
-    $('shortageAlert').innerHTML=shortage.length?`<div class="shortage-panel"><h3>⚠️ 先に確認｜人員不足 ${shortage.length}時間帯</h3>${shortage.map(r=>`<div class="shortage-row"><b>${String(r.h).padStart(2,'0')}:00〜${String(r.h+1).padStart(2,'0')}:00</b><span>${r.count}人 ／ 必要${r.need}人</span><span class="shortage-num">${r.need-r.count}人不足</span></div>`).join('')}</div>`:'<div class="allgood-panel">✓ 設定した必要人数をすべての時間帯で満たしています</div>';
-    $('hourGrid').innerHTML=rows.map(r=>{let diff=r.count-r.need,cls=diff>=0?'good':diff===-1?'warn':'bad',label=diff>=0?'充足':diff===-1?'注意':`${-diff}人不足`;let workers=r.people.length?r.people.map(x=>`<span class="workerchip">${esc(x.name)} <small>${x.start}〜${x.end}</small></span>`).join(''):'<span class="noworker">勤務者なし</span>';return `<div class="hourcard ${cls}"><div class="hourtop"><div class="hourtime">${String(r.h).padStart(2,'0')}:00</div><div class="hourcount"><b>${r.count}</b>人 <span class="muted">／ 必要 ${r.need}人</span></div><div class="statuslabel">${label}</div></div><div class="hourworkers">${workers}</div></div>`}).join('');
-    renderStaffMatrixShared(rows);
-    if(resetDetail)$('workerDetail').innerHTML='';
-  }catch(e){
-    $('staffSummary').innerHTML='<div class="authgate rejected">'+esc(e.message)+'</div>';
+    const result=await callShiftApi('list_my');
+
+    currentShifts=(result.shifts||[])
+      .map(normalizeShift);
+
+    currentShifts.sort((a,b)=>{
+      const da=
+        `${a.work_date} ${hm(a.start_time)}`;
+      const db=
+        `${b.work_date} ${hm(b.start_time)}`;
+      return da.localeCompare(db);
+    });
+
+    renderMyShifts();
+
+  }catch(err){
+    console.error(err);
+
+    box.innerHTML=
+      `<div class="notice">${esc(err.message)}</div>`;
   }
 }
-if($('staffDate'))$('staffDate').onchange=()=>{sharedDayDate='';renderStaffing()};
 
-if($('refreshStaffBtn'))$('refreshStaffBtn').onclick=()=>{sharedDayDate='';renderStaffing();};
-if($('applyDefaultNeed'))$('applyDefaultNeed').onclick=()=>{let v=Math.max(0,Number($('defaultNeed').value||0)),n={};staffingHours.forEach(h=>n[h]=v);saveNeeds(n);renderNeedGrid();sharedDayDate='';renderStaffing();};
+function requestLabel(req){
+  if(!req)return '';
 
+  const type=
+    req.request_type==='cancel'
+      ? '取消申請'
+      : '変更申請';
 
-function csvCell(v){
-  const x=String(v??''); return '"'+x.replace(/"/g,'""')+'"';
-}
-function downloadShiftCsv(rows,filename){
-  const header=['勤務日','氏名','部署','予定出勤','予定退勤','予定休憩','実績出勤','実績退勤','実績休憩','実働時間'];
-  const lines=[header.map(csvCell).join(',')];
-  rows.slice().sort((a,b)=>a.date.localeCompare(b.date)||a.start.localeCompare(b.start)||a.name.localeCompare(b.name,'ja')).forEach(s=>{
-    lines.push([
-      s.date,s.name,s.department||'',s.start,s.end,
-      (s.breaks&&s.breaks.length?s.breaks.join(' / '):'なし'),
-      s.actual?.start||'',s.actual?.end||'',
-      (s.actual?.breaks?.length?s.actual.breaks.join(' / '):(s.actual?'なし':'')),
-      s.actual?minText(actualMinutes(s.actual)):''
-    ].map(csvCell).join(','));
-  });
-  const blob=new Blob(['\ufeff'+lines.join('\r\n')],{type:'text/csv;charset=utf-8;'});
-  const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
-}
-async function exportDayCsv(){
-  if(!isAdmin()){alert('CSV出力は管理者のみ利用できます');return}
-  const d=$('staffDate').value;if(!d){alert('日付を選択してください');return}
-  try{await loadDaySharedShifts(d);downloadShiftCsv(sharedDayShifts,`シフト_${d}.csv`)}catch(e){alert(e.message)}
-}
-async function exportRangeCsv(){
-  if(!isAdmin()){alert('CSV出力は管理者のみ利用できます');return}
-  const from=$('csvFrom').value,to=$('csvTo').value;if(!from||!to){alert('開始日と終了日を選択してください');return}
-  if(from>to){alert('終了日は開始日以降にしてください');return}
-  const start=new Date(from+'T00:00:00'),end=new Date(to+'T00:00:00');
-  const diff=Math.round((end-start)/86400000);if(diff>92){alert('一度に出力できる期間は93日以内です');return}
-  const all=[];try{
-    for(let d=new Date(start);d<=end;d.setDate(d.getDate()+1)){
-      const iso=d.toISOString().slice(0,10);const data=await callShiftApi('list_day',{workDate:iso});
-      (data.shifts||[]).forEach(r=>all.push(normalizeShift(r)));
-    }
-    downloadShiftCsv(all,`シフト_${from}_${to}.csv`);
-  }catch(e){alert(e.message)}
-}
-if($('csvDayBtn'))$('csvDayBtn').onclick=exportDayCsv;
-if($('csvRangeBtn'))$('csvRangeBtn').onclick=exportRangeCsv;
-if($('csvFrom')&&!$('csvFrom').value)$('csvFrom').value=new Date().toISOString().slice(0,10);
-if($('csvTo')&&!$('csvTo').value)$('csvTo').value=new Date().toISOString().slice(0,10);
+  const statusMap={
+    pending:'申請中',
+    approved:'承認済み',
+    rejected:'却下'
+  };
 
-// LINE認証完了後、DB上の氏名をシフト登録欄に反映
-const _verifyEmployeeV18=verifyEmployee;
-verifyEmployee=async function(){
-  await _verifyEmployeeV18();
-  if(authState.approved&&authState.employee){
-    if($('shiftName')){$('shiftName').value=authState.employee.name||'';$('shiftName').readOnly=true}
+  return `${type}：${statusMap[req.status]||req.status}`;
+}
+
+function renderMyShifts(){
+  const box=$('shiftList');
+
+  if(!currentShifts.length){
+    box.innerHTML=
+      '<div class="empty">登録されているシフトはありません。</div>';
+    return;
+  }
+
+  box.innerHTML=currentShifts.map(s=>{
+    const actual=s.actual;
+
+    const actualBreaks=
+      actual?.shift_actual_breaks||[];
+
+    const pending=
+      (s.requests||[])
+      .find(r=>r.status==='pending');
+
+    const actualHtml=actual
+      ? `
+        <div class="actualbox">
+          <b>実働 ${hm(actual.actual_start_time)}〜${hm(actual.actual_end_time)}</b>
+          <br>
+          休憩：${esc(formatBreaks(actualBreaks))}
+          <br>
+          実働時間：
+          ${esc(durationText(
+            actual.actual_start_time,
+            actual.actual_end_time,
+            actualBreaks
+          ))}
+        </div>
+      `
+      : `
+        <div class="notice">
+          実働はまだ入力されていません。
+        </div>
+      `;
+
+    const reqHtml=pending
+      ? `
+        <div class="request-status pending">
+          ${esc(requestLabel(pending))}
+          ${pending.reason
+            ? `｜理由：${esc(pending.reason)}`
+            : ''}
+        </div>
+      `
+      : '';
+
+    return `
+      <div class="shift">
+        <b>
+          ${esc(shortDate(s.work_date))}
+          &nbsp; ${esc(currentEmployee?.name||'')}
+        </b>
+
+        <div class="muted">
+          予定 ${hm(s.start_time)}〜${hm(s.end_time)}
+          ／ 休憩：${esc(formatBreaks(s.shift_breaks))}
+        </div>
+
+        ${actualHtml}
+        ${reqHtml}
+
+        <div class="actions">
+          <button class="mini"
+            onclick="copyShiftUi('${s.id}')">
+            ✓ 複写
+          </button>
+
+          <button class="mini"
+            onclick="actualShiftUi('${s.id}')">
+            実働入力
+          </button>
+
+          <button class="mini"
+            onclick="changeShiftUi('${s.id}')"
+            ${pending?'disabled':''}>
+            変更申請
+          </button>
+
+          <button class="mini"
+            onclick="cancelShiftUi('${s.id}')"
+            ${pending?'disabled':''}>
+            取消申請
+          </button>
+        </div>
+
+        <div id="inline-${s.id}"></div>
+      </div>
+    `;
+  }).join('');
+}
+
+window.actualShiftUi=function(id){
+  const s=currentShifts.find(x=>x.id===id);
+  if(!s)return;
+
+  const actual=s.actual;
+  const oldBreaks=
+    actual?.shift_actual_breaks||
+    s.shift_breaks||
+    [];
+
+  const selected=oldBreaks.map(
+    b=>`${hm(b.start_time)}-${hm(b.end_time)}`
+  );
+
+  const box=$(`inline-${id}`);
+
+  box.innerHTML=`
+    <div class="actualform">
+      <b>実働入力</b>
+
+      <div class="row">
+        <div>
+          <label>実際の出勤</label>
+          <input type="time"
+            id="actualStart-${id}"
+            value="${hm(
+              actual?.actual_start_time||
+              s.start_time
+            )}">
+        </div>
+
+        <div>
+          <label>実際の退勤</label>
+          <input type="time"
+            id="actualEnd-${id}"
+            value="${hm(
+              actual?.actual_end_time||
+              s.end_time
+            )}">
+        </div>
+      </div>
+
+      <label>実際の休憩</label>
+      <div class="checks"
+        id="actualBreaks-${id}">
+      </div>
+
+      <button class="primary"
+        onclick="saveActual('${id}')">
+        実働を保存
+      </button>
+
+      <button class="secondary"
+        onclick="closeInline('${id}')">
+        閉じる
+      </button>
+    </div>
+  `;
+
+  renderBreakChecks(
+    `actualBreaks-${id}`,
+    selected
+  );
+};
+
+window.saveActual=async function(id){
+  const start=
+    $(`actualStart-${id}`).value;
+
+  const end=
+    $(`actualEnd-${id}`).value;
+
+  const breaks=
+    selectedBreakValues(
+      $(`actualBreaks-${id}`)
+    );
+
+  if(!start||!end){
+    alert('実際の出勤・退勤時間を入力してください');
+    return;
+  }
+
+  try{
+    await callShiftApi('save_actual',{
+      shiftId:id,
+      actualStartTime:start,
+      actualEndTime:end,
+      breaks
+    });
+
+    alert('実働を保存しました');
+
+    await loadMyShifts();
+
+  }catch(err){
+    alert(err.message);
   }
 };
 
-loadProfile();prefillShift();renderBoard();renderNeedGrid();if($('staffDate'))$('staffDate').value=new Date().toISOString().slice(0,10);setStaffView(localStorage.getItem('mtStaffViewV12')||'list');initLine();
-</script></body></html>
+window.closeInline=function(id){
+  const box=$(`inline-${id}`);
+  if(box)box.innerHTML='';
+};
+
+window.changeShiftUi=function(id){
+  const s=currentShifts.find(x=>x.id===id);
+  if(!s)return;
+
+  const selected=(s.shift_breaks||[]).map(
+    b=>`${hm(b.start_time)}-${hm(b.end_time)}`
+  );
+
+  const box=$(`inline-${id}`);
+
+  box.innerHTML=`
+    <div class="actualform">
+      <b>シフト変更申請</b>
+
+      <div class="row">
+        <div>
+          <label>変更後の開始</label>
+          <input type="time"
+            id="changeStart-${id}"
+            value="${hm(s.start_time)}">
+        </div>
+
+        <div>
+          <label>変更後の終了</label>
+          <input type="time"
+            id="changeEnd-${id}"
+            value="${hm(s.end_time)}">
+        </div>
+      </div>
+
+      <label>変更後の休憩</label>
+      <div class="checks"
+        id="changeBreaks-${id}">
+      </div>
+
+      <label>変更理由</label>
+      <textarea id="changeReason-${id}"
+        placeholder="例：予定が入ったため"></textarea>
+
+      <button class="primary"
+        onclick="sendChangeRequest('${id}')">
+        変更申請を送る
+      </button>
+
+      <button class="secondary"
+        onclick="closeInline('${id}')">
+        閉じる
+      </button>
+    </div>
+  `;
+
+  renderBreakChecks(
+    `changeBreaks-${id}`,
+    selected
+  );
+};
+
+window.sendChangeRequest=async function(id){
+  const start=
+    $(`changeStart-${id}`).value;
+
+  const end=
+    $(`changeEnd-${id}`).value;
+
+  const reason=
+    $(`changeReason-${id}`).value.trim();
+
+  const breaks=
+    selectedBreakValues(
+      $(`changeBreaks-${id}`)
+    );
+
+  if(!start||!end){
+    alert('変更後の開始・終了を入力してください');
+    return;
+  }
+
+  try{
+    await callShiftApi('request_change',{
+      shiftId:id,
+      startTime:start,
+      endTime:end,
+      reason,
+      breaks
+    });
+
+    alert('シフト変更を申請しました');
+
+    await loadMyShifts();
+
+  }catch(err){
+    alert(err.message);
+  }
+};
+
+window.cancelShiftUi=async function(id){
+  const reason=prompt(
+    '取消理由を入力してください'
+  );
+
+  if(reason===null)return;
+
+  if(!confirm(
+    'このシフトの取消申請を送りますか？'
+  )){
+    return;
+  }
+
+  try{
+    await callShiftApi('request_cancel',{
+      shiftId:id,
+      reason:reason.trim()
+    });
+
+    alert('シフト取消を申請しました');
+
+    await loadMyShifts();
+
+  }catch(err){
+    alert(err.message);
+  }
+};
+
+window.copyShiftUi=function(id){
+  const s=currentShifts.find(x=>x.id===id);
+  if(!s)return;
+
+  const box=$(`inline-${id}`);
+
+  const dates=[];
+  const base=new Date(
+    s.work_date+'T00:00:00'
+  );
+
+  for(let i=1;i<=14;i++){
+    const d=new Date(base);
+    d.setDate(d.getDate()+i);
+    dates.push(localDateStr(d));
+  }
+
+  box.innerHTML=`
+    <div class="copybox">
+      <b>このシフトを複写</b>
+      <div class="muted">
+        複写したい日を選んでください。
+      </div>
+
+      <div style="margin:8px 0">
+        <button class="mini"
+          onclick="copySelectAll('${id}',true)">
+          全選択
+        </button>
+
+        <button class="mini"
+          onclick="copySelectAll('${id}',false)">
+          クリア
+        </button>
+      </div>
+
+      <div class="checks"
+        id="copyDates-${id}">
+        ${dates.map(d=>`
+          <label class="check">
+            <input type="checkbox"
+              value="${d}">
+            <span>${esc(shortDate(d))}</span>
+          </label>
+        `).join('')}
+      </div>
+
+      <button class="primary"
+        onclick="executeCopy('${id}')">
+        選択日に複写
+      </button>
+
+      <button class="secondary"
+        onclick="closeInline('${id}')">
+        閉じる
+      </button>
+    </div>
+  `;
+};
+
+window.copySelectAll=function(id,on){
+  const box=$(`copyDates-${id}`);
+  if(!box)return;
+
+  box.querySelectorAll(
+    'input[type="checkbox"]'
+  ).forEach(cb=>{
+    cb.checked=on;
+  });
+};
+
+window.executeCopy=async function(id){
+  const s=currentShifts.find(x=>x.id===id);
+  if(!s)return;
+
+  const box=$(`copyDates-${id}`);
+
+  const dates=[
+    ...box.querySelectorAll(
+      'input[type="checkbox"]:checked'
+    )
+  ].map(cb=>cb.value);
+
+  if(!dates.length){
+    alert('複写する日を選択してください');
+    return;
+  }
+
+  const breaks=(s.shift_breaks||[]).map(
+    b=>`${hm(b.start_time)}-${hm(b.end_time)}`
+  );
+
+  let success=0;
+  let failed=[];
+
+  for(const workDate of dates){
+    try{
+      await callShiftApi('create',{
+        workDate,
+        startTime:hm(s.start_time),
+        endTime:hm(s.end_time),
+        breaks
+      });
+
+      success++;
+    }catch(err){
+      failed.push(
+        `${shortDate(workDate)}：${err.message}`
+      );
+    }
+  }
+
+  let msg=`${success}件のシフトを複写しました。`;
+
+  if(failed.length){
+    msg+=`\n\n登録できなかった日\n${failed.join('\n')}`;
+  }
+
+  alert(msg);
+
+  await loadMyShifts();
+};
+
+function getNeedMap(){
+  try{
+    return JSON.parse(
+      localStorage.getItem('mtNeedMap')||'{}'
+    );
+  }catch(e){
+    return {};
+  }
+}
+
+function saveNeedMap(map){
+  localStorage.setItem(
+    'mtNeedMap',
+    JSON.stringify(map)
+  );
+}
+
+function initNeedGrid(){
+  const map=getNeedMap();
+
+  let html='';
+
+  for(let h=7;h<22;h++){
+    const key=String(h).padStart(2,'0');
+    const val=
+      map[key]!==undefined
+        ? map[key]
+        : 3;
+
+    html+=`
+      <div class="needitem">
+        <span>${key}:00</span>
+        <input type="number"
+          min="0"
+          value="${val}"
+          data-hour="${key}">
+      </div>
+    `;
+  }
+
+  $('needGrid').innerHTML=html;
+
+  $('needGrid')
+    .querySelectorAll('input')
+    .forEach(input=>{
+      input.addEventListener(
+        'change',
+        ()=>{
+          const m=getNeedMap();
+          m[input.dataset.hour]=
+            Math.max(
+              0,
+              Number(input.value)||0
+            );
+          saveNeedMap(m);
+          renderStaffing();
+        }
+      );
+    });
+}
+
+$('applyDefaultNeed').addEventListener(
+  'click',
+  ()=>{
+    const val=Math.max(
+      0,
+      Number($('defaultNeed').value)||0
+    );
+
+    const map={};
+
+    for(let h=7;h<22;h++){
+      map[
+        String(h).padStart(2,'0')
+      ]=val;
+    }
+
+    saveNeedMap(map);
+    initNeedGrid();
+    renderStaffing();
+
+    alert('必要人数を全時間へ反映しました');
+  }
+);async function loadStaffing(){
+  if(currentEmployee?.role!=='admin'){
+    $('staffSummary').innerHTML=
+      '<div class="notice">人員配置は管理者のみ確認できます。</div>';
+    return;
+  }
+
+  const workDate=
+    $('staffDate').value||
+    localDateStr();
+
+  $('staffDate').value=workDate;
+
+  $('hourGrid').innerHTML=
+    '<div class="empty">読み込み中...</div>';
+
+  try{
+    const result=await callShiftApi(
+      'list_day',
+      {workDate}
+    );
+
+    staffShifts=(result.shifts||[])
+      .map(normalizeShift);
+
+    renderStaffing();
+    renderAdminShiftList();
+
+  }catch(err){
+    console.error(err);
+
+    $('hourGrid').innerHTML=
+      `<div class="notice">${esc(err.message)}</div>`;
+  }
+}
+
+function isWorkingAt(shift,hour){
+  const start=minutes(shift.start_time);
+  const end=minutes(shift.end_time);
+  const point=hour*60+30;
+
+  if(point<start || point>=end){
+    return false;
+  }
+
+  const onBreak=(shift.shift_breaks||[])
+    .some(b=>{
+      const bs=minutes(b.start_time);
+      const be=minutes(b.end_time);
+      return point>=bs && point<be;
+    });
+
+  return !onBreak;
+}
+
+function workersAt(hour){
+  return staffShifts.filter(
+    s=>isWorkingAt(s,hour)
+  );
+}
+
+function renderStaffing(){
+  if(currentEmployee?.role!=='admin'){
+    return;
+  }
+
+  const needMap=getNeedMap();
+
+  let totalShort=0;
+  let shortageHours=[];
+  let maxWorkers=0;
+
+  const uniqueEmployees=
+    new Map();
+
+  staffShifts.forEach(s=>{
+    const e=s.employees;
+
+    if(e?.id){
+      uniqueEmployees.set(
+        e.id,
+        e
+      );
+    }
+  });
+
+  for(let h=7;h<22;h++){
+    const key=
+      String(h).padStart(2,'0');
+
+    const count=
+      workersAt(h).length;
+
+    const need=
+      Number(
+        needMap[key]!==undefined
+          ? needMap[key]
+          : 3
+      );
+
+    maxWorkers=Math.max(
+      maxWorkers,
+      count
+    );
+
+    if(count<need){
+      const diff=need-count;
+      totalShort+=diff;
+
+      shortageHours.push({
+        hour:key,
+        count,
+        need,
+        diff
+      });
+    }
+  }
+
+  $('staffSummary').innerHTML=`
+    <div class="staff-total">
+      <b>${uniqueEmployees.size}</b>
+      <span>名がこの日に登録</span>
+
+      <div class="names">
+        ${
+          [...uniqueEmployees.values()]
+          .map(e=>esc(e.name||'名称未設定'))
+          .join('・')||
+          '登録者なし'
+        }
+      </div>
+    </div>
+
+    <div class="staff-summary">
+      <div class="metric">
+        <b>${staffShifts.length}</b>
+        <span>登録シフト</span>
+      </div>
+
+      <div class="metric">
+        <b>${maxWorkers}</b>
+        <span>最大配置</span>
+      </div>
+
+      <div class="metric">
+        <b>${totalShort}</b>
+        <span>不足人数合計</span>
+      </div>
+    </div>
+  `;
+
+  if(shortageHours.length){
+    $('shortageAlert').innerHTML=`
+      <div class="shortage-panel">
+        <h3>⚠ 人員不足</h3>
+
+        ${shortageHours.map(x=>`
+          <div class="shortage-row">
+            <b>${x.hour}:00</b>
+            <span>
+              配置 ${x.count}名 /
+              必要 ${x.need}名
+            </span>
+            <span class="shortage-num">
+              -${x.diff}名
+            </span>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  }else{
+    $('shortageAlert').innerHTML=`
+      <div class="allgood-panel">
+        ✓ 設定した必要人数を満たしています。
+      </div>
+    `;
+  }
+
+  renderHourList();
+  renderMatrix();
+}
+
+function renderHourList(){
+  const needMap=getNeedMap();
+  let html='';
+
+  for(let h=7;h<22;h++){
+    const key=
+      String(h).padStart(2,'0');
+
+    const workers=
+      workersAt(h);
+
+    const count=
+      workers.length;
+
+    const need=
+      Number(
+        needMap[key]!==undefined
+          ? needMap[key]
+          : 3
+      );
+
+    let cls='good';
+    let label='充足';
+
+    if(count<need){
+      cls='bad';
+      label=`不足 ${need-count}名`;
+    }else if(
+      need>0 &&
+      count===need
+    ){
+      cls='warn';
+      label='ちょうど';
+    }
+
+    html+=`
+      <div class="hourcard ${cls}">
+        <div class="hourtop">
+          <div class="hourtime">
+            ${key}:00
+          </div>
+
+          <div class="hourcount">
+            <b>${count}</b>名
+            <span class="muted">
+              / 必要 ${need}名
+            </span>
+          </div>
+
+          <div class="statuslabel">
+            ${label}
+          </div>
+        </div>
+
+        <div class="hourworkers">
+          ${
+            workers.length
+              ? workers.map(s=>`
+                  <span class="workerchip">
+                    ${esc(
+                      s.employees?.name||
+                      '名称未設定'
+                    )}
+                    ${
+                      s.employees?.department
+                        ? `<small>${esc(
+                            s.employees.department
+                          )}</small>`
+                        : ''
+                    }
+                  </span>
+                `).join('')
+              : '<span class="noworker">配置なし</span>'
+          }
+        </div>
+      </div>
+    `;
+  }
+
+  $('hourGrid').innerHTML=html;
+}
+
+function renderMatrix(){
+  const employeesMap=new Map();
+
+  staffShifts.forEach(s=>{
+    const e=s.employees;
+
+    if(e?.id){
+      employeesMap.set(
+        e.id,
+        e
+      );
+    }
+  });
+
+  const employees=
+    [...employeesMap.values()]
+    .sort((a,b)=>
+      String(a.name||'')
+      .localeCompare(
+        String(b.name||''),
+        'ja'
+      )
+    );
+
+  if(!employees.length){
+    $('staffMatrix').innerHTML=`
+      <div class="matrixempty">
+        この日の登録シフトはありません。
+      </div>
+    `;
+    return;
+  }
+
+  const needMap=getNeedMap();
+
+  let html=`
+    <div class="matrixcount">
+      横にスクロールすると全員確認できます。
+    </div>
+
+    <div class="matrixwrap">
+      <table class="staffmatrix">
+        <thead>
+          <tr>
+            <th class="timecol">
+              時間
+            </th>
+
+            ${employees.map(e=>`
+              <th class="personhead">
+                ${esc(e.name||'名称未設定')}
+              </th>
+            `).join('')}
+          </tr>
+        </thead>
+
+        <tbody>
+  `;
+
+  for(let h=7;h<22;h++){
+    const key=
+      String(h).padStart(2,'0');
+
+    const count=
+      workersAt(h).length;
+
+    const need=
+      Number(
+        needMap[key]!==undefined
+          ? needMap[key]
+          : 3
+      );
+
+    html+=`
+      <tr class="${count<need?'shortage':''}">
+        <td class="timecol">
+          ${key}:00
+          <br>
+          <small>${count}/${need}</small>
+        </td>
+    `;
+
+    employees.forEach(e=>{
+      const shifts=
+        staffShifts.filter(
+          s=>s.employees?.id===e.id
+        );
+
+      const working=
+        shifts.some(
+          s=>isWorkingAt(s,h)
+        );
+
+      html+=`
+        <td class="${working?'working':'off'}">
+          ${working?'勤務':'－'}
+        </td>
+      `;
+    });
+
+    html+='</tr>';
+  }
+
+  html+=`
+        </tbody>
+      </table>
+    </div>
+
+    <div class="matrixlegend">
+      <span>
+        <i class="legenddot work"></i>
+        勤務
+      </span>
+
+      <span>
+        <i class="legenddot short"></i>
+        人員不足時間
+      </span>
+    </div>
+  `;
+
+  $('staffMatrix').innerHTML=html;
+}
+
+function switchStaffView(view){
+  selectedStaffView=view;
+
+  $('listViewBtn')
+    .classList
+    .toggle('on',view==='list');
+
+  $('matrixViewBtn')
+    .classList
+    .toggle('on',view==='matrix');
+
+  $('listArea')
+    .classList
+    .toggle('hide',view!=='list');
+
+  $('matrixArea')
+    .classList
+    .toggle('hide',view!=='matrix');
+}
+
+$('listViewBtn').addEventListener(
+  'click',
+  ()=>switchStaffView('list')
+);
+
+$('matrixViewBtn').addEventListener(
+  'click',
+  ()=>switchStaffView('matrix')
+);
+
+$('refreshStaffing').addEventListener(
+  'click',
+  loadStaffing
+);
+
+$('staffDate').addEventListener(
+  'change',
+  loadStaffing
+);
+
+function renderAdminShiftList(){
+  if(currentEmployee?.role!=='admin'){
+    return;
+  }
+
+  const box=$('adminShiftList');
+
+  if(!staffShifts.length){
+    box.innerHTML=`
+      <div class="empty">
+        この日の登録シフトはありません。
+      </div>
+    `;
+    return;
+  }
+
+  box.innerHTML=staffShifts.map(s=>{
+    const actual=s.actual;
+
+    const actualBreaks=
+      actual?.shift_actual_breaks||[];
+
+    return `
+      <div class="admin-shift-row">
+        <b>
+          ${esc(
+            s.employees?.name||
+            '名称未設定'
+          )}
+        </b>
+
+        <div class="muted">
+          予定：
+          ${hm(s.start_time)}
+          〜
+          ${hm(s.end_time)}
+          ／
+          休憩：
+          ${esc(
+            formatBreaks(
+              s.shift_breaks
+            )
+          )}
+        </div>
+
+        ${
+          actual
+            ? `
+              <div class="actualbox">
+                実働：
+                ${hm(actual.actual_start_time)}
+                〜
+                ${hm(actual.actual_end_time)}
+                ／
+                ${esc(
+                  durationText(
+                    actual.actual_start_time,
+                    actual.actual_end_time,
+                    actualBreaks
+                  )
+                )}
+              </div>
+            `
+            : `
+              <div class="muted">
+                実働未入力
+              </div>
+            `
+        }
+
+        <div class="actions">
+          <button class="mini"
+            onclick="adminEditShiftUi('${s.id}')">
+            予定を修正
+          </button>
+
+          <button class="mini"
+            onclick="adminActualUi('${s.id}')">
+            実働を修正
+          </button>
+        </div>
+
+        <div id="admin-inline-${s.id}">
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+window.adminEditShiftUi=function(id){
+  const s=
+    staffShifts.find(
+      x=>x.id===id
+    );
+
+  if(!s)return;
+
+  const selected=
+    (s.shift_breaks||[])
+    .map(
+      b=>
+        `${hm(b.start_time)}-${hm(b.end_time)}`
+    );
+
+  const box=
+    $(`admin-inline-${id}`);
+
+  box.innerHTML=`
+    <div class="actualform">
+      <b>予定シフト修正</b>
+
+      <div class="row">
+        <div>
+          <label>開始</label>
+          <input type="time"
+            id="adminStart-${id}"
+            value="${hm(s.start_time)}">
+        </div>
+
+        <div>
+          <label>終了</label>
+          <input type="time"
+            id="adminEnd-${id}"
+            value="${hm(s.end_time)}">
+        </div>
+      </div>
+
+      <label>休憩</label>
+
+      <div class="checks"
+        id="adminBreaks-${id}">
+      </div>
+
+      <button class="primary"
+        onclick="saveAdminShift('${id}')">
+        予定を保存
+      </button>
+
+      <button class="secondary"
+        onclick="closeAdminInline('${id}')">
+        閉じる
+      </button>
+    </div>
+  `;
+
+  renderBreakChecks(
+    `adminBreaks-${id}`,
+    selected
+  );
+};
+
+window.saveAdminShift=async function(id){
+  const start=
+    $(`adminStart-${id}`).value;
+
+  const end=
+    $(`adminEnd-${id}`).value;
+
+  const breaks=
+    selectedBreakValues(
+      $(`adminBreaks-${id}`)
+    );
+
+  if(!start||!end){
+    alert(
+      '開始・終了を入力してください'
+    );
+    return;
+  }
+
+  try{
+    await callShiftApi(
+      'admin_update_shift',
+      {
+        shiftId:id,
+        startTime:start,
+        endTime:end,
+        breaks
+      }
+    );
+
+    alert(
+      '予定シフトを修正しました'
+    );
+
+    await loadStaffing();
+    await loadMyShifts();
+
+  }catch(err){
+    alert(err.message);
+  }
+};
+
+window.adminActualUi=function(id){
+  const s=
+    staffShifts.find(
+      x=>x.id===id
+    );
+
+  if(!s)return;
+
+  const actual=s.actual;
+
+  const oldBreaks=
+    actual?.shift_actual_breaks||
+    s.shift_breaks||
+    [];
+
+  const selected=
+    oldBreaks.map(
+      b=>
+        `${hm(b.start_time)}-${hm(b.end_time)}`
+    );
+
+  const box=
+    $(`admin-inline-${id}`);
+
+  box.innerHTML=`
+    <div class="actualform">
+      <b>実働修正</b>
+
+      <div class="row">
+        <div>
+          <label>実際の出勤</label>
+          <input type="time"
+            id="adminActualStart-${id}"
+            value="${hm(
+              actual?.actual_start_time||
+              s.start_time
+            )}">
+        </div>
+
+        <div>
+          <label>実際の退勤</label>
+          <input type="time"
+            id="adminActualEnd-${id}"
+            value="${hm(
+              actual?.actual_end_time||
+              s.end_time
+            )}">
+        </div>
+      </div>
+
+      <label>実際の休憩</label>
+
+      <div class="checks"
+        id="adminActualBreaks-${id}">
+      </div>
+
+      <button class="primary"
+        onclick="saveAdminActual('${id}')">
+        実働を保存
+      </button>
+
+      <button class="secondary"
+        onclick="closeAdminInline('${id}')">
+        閉じる
+      </button>
+    </div>
+  `;
+
+  renderBreakChecks(
+    `adminActualBreaks-${id}`,
+    selected
+  );
+};
+
+window.saveAdminActual=async function(id){
+  const start=
+    $(`adminActualStart-${id}`).value;
+
+  const end=
+    $(`adminActualEnd-${id}`).value;
+
+  const breaks=
+    selectedBreakValues(
+      $(`adminActualBreaks-${id}`)
+    );
+
+  if(!start||!end){
+    alert(
+      '実際の出勤・退勤時間を入力してください'
+    );
+    return;
+  }
+
+  try{
+    await callShiftApi(
+      'save_actual',
+      {
+        shiftId:id,
+        actualStartTime:start,
+        actualEndTime:end,
+        breaks
+      }
+    );
+
+    alert('実働を保存しました');
+
+    await loadStaffing();
+    await loadMyShifts();
+
+  }catch(err){
+    alert(err.message);
+  }
+};
+
+window.closeAdminInline=function(id){
+  const box=
+    $(`admin-inline-${id}`);
+
+  if(box){
+    box.innerHTML='';
+  }
+};
+
+async function loadRequests(){
+  if(currentEmployee?.role!=='admin'){
+    return;
+  }
+
+  const box=
+    $('adminRequestList');
+
+  box.innerHTML=
+    '<div class="muted">読み込み中...</div>';
+
+  try{
+    const result=
+      await callShiftApi(
+        'list_requests'
+      );
+
+    currentRequests=
+      result.requests||[];
+
+    renderRequests();
+
+  }catch(err){
+    box.innerHTML=`
+      <div class="notice">
+        ${esc(err.message)}
+      </div>
+    `;
+  }
+}
+
+function renderRequests(){
+  const box=
+    $('adminRequestList');
+
+  if(!currentRequests.length){
+    box.innerHTML=`
+      <div class="ok">
+        現在、承認待ちの申請はありません。
+      </div>
+    `;
+    return;
+  }
+
+  box.innerHTML=
+    currentRequests.map(r=>{
+      const s=r.shifts||{};
+
+      const employee=
+        r.employees||
+        s.employees||
+        {};
+
+      const type=
+        r.request_type==='cancel'
+          ? '取消申請'
+          : '変更申請';
+
+      const requested=
+        r.request_type==='change'
+          ? `
+            <div class="muted">
+              変更後：
+              ${hm(r.requested_start_time)}
+              〜
+              ${hm(r.requested_end_time)}
+              <br>
+              休憩：
+              ${esc(
+                formatBreaks(
+                  r.shift_change_request_breaks||
+                  []
+                )
+              )}
+            </div>
+          `
+          : '';
+
+      return `
+        <div class="admin-request-row">
+          <b>
+            ${esc(
+              employee.name||
+              '名称未設定'
+            )}
+            ｜${type}
+          </b>
+
+          <div class="muted">
+            ${esc(
+              shortDate(
+                s.work_date
+              )
+            )}
+            <br>
+            現在：
+            ${hm(s.start_time)}
+            〜
+            ${hm(s.end_time)}
+          </div>
+
+          ${requested}
+
+          ${
+            r.reason
+              ? `
+                <div class="notice">
+                  理由：
+                  ${esc(r.reason)}
+                </div>
+              `
+              : ''
+          }
+
+          <div class="admin-request-actions">
+            <button class="approve-btn"
+              onclick="approveShiftRequest('${r.id}')">
+              承認
+            </button>
+
+            <button class="reject-btn"
+              onclick="rejectShiftRequest('${r.id}')">
+              却下
+            </button>
+          </div>
+        </div>
+      `;
+    }).join('');
+}
+
+window.approveShiftRequest=
+async function(id){
+  if(!confirm(
+    'この申請を承認しますか？'
+  )){
+    return;
+  }
+
+  try{
+    await callShiftApi(
+      'approve_request',
+      {requestId:id}
+    );
+
+    alert('申請を承認しました');
+
+    await loadRequests();
+    await loadStaffing();
+    await loadMyShifts();
+
+  }catch(err){
+    alert(err.message);
+  }
+};
+
+window.rejectShiftRequest=
+async function(id){
+  if(!confirm(
+    'この申請を却下しますか？'
+  )){
+    return;
+  }
+
+  try{
+    await callShiftApi(
+      'reject_request',
+      {requestId:id}
+    );
+
+    alert('申請を却下しました');
+
+    await loadRequests();
+    await loadStaffing();
+    await loadMyShifts();
+
+  }catch(err){
+    alert(err.message);
+  }
+};
+
+$('refreshRequests').addEventListener(
+  'click',
+  loadRequests
+);
+
+function csvEscape(value){
+  const s=String(
+    value??''
+  );
+
+  return `"${s.replace(
+    /"/g,
+    '""'
+  )}"`;
+}
+
+function shiftCsvRows(
+  shifts,
+  workDateOverride=''
+){
+  return shifts.map(s=>{
+    const actual=s.actual;
+
+    const actualBreaks=
+      actual?.shift_actual_breaks||[];
+
+    const actualDuration=
+      actual
+        ? durationText(
+            actual.actual_start_time,
+            actual.actual_end_time,
+            actualBreaks
+          )
+        : '';
+
+    let diff='';
+
+    if(actual){
+      const planned=
+        minutes(s.end_time)-
+        minutes(s.start_time)-
+        (s.shift_breaks||[])
+          .reduce(
+            (sum,b)=>
+              sum+
+              Math.max(
+                0,
+                minutes(b.end_time)-
+                minutes(b.start_time)
+              ),
+            0
+          );
+
+      const actualMin=
+        minutes(
+          actual.actual_end_time
+        )-
+        minutes(
+          actual.actual_start_time
+        )-
+        actualBreaks.reduce(
+          (sum,b)=>
+            sum+
+            Math.max(
+              0,
+              minutes(b.end_time)-
+              minutes(b.start_time)
+            ),
+          0
+        );
+
+      diff=actualMin-planned;
+    }
+
+    return [
+      workDateOverride||
+        s.work_date,
+      s.employees?.name||
+        currentEmployee?.name||
+        '',
+      s.employees?.department||
+        currentEmployee?.department||
+        '',
+      hm(s.start_time),
+      hm(s.end_time),
+      formatBreaks(
+        s.shift_breaks
+      ),
+      actual
+        ? hm(
+            actual.actual_start_time
+          )
+        : '',
+      actual
+        ? hm(
+            actual.actual_end_time
+          )
+        : '',
+      actual
+        ? formatBreaks(
+            actualBreaks
+          )
+        : '',
+      actualDuration,
+      diff
+    ];
+  });
+}
+
+function downloadCsv(
+  filename,
+  rows
+){
+  const header=[
+    '勤務日',
+    '氏名',
+    '部署',
+    '予定開始',
+    '予定終了',
+    '予定休憩',
+    '実働開始',
+    '実働終了',
+    '実働休憩',
+    '実働時間',
+    '予定との差（分）'
+  ];
+
+  const lines=[
+    header,
+    ...rows
+  ].map(row=>
+    row.map(csvEscape).join(',')
+  );
+
+  const bom='\uFEFF';
+
+  const blob=new Blob(
+    [
+      bom+
+      lines.join('\r\n')
+    ],
+    {
+      type:
+        'text/csv;charset=utf-8;'
+    }
+  );
+
+  const url=
+    URL.createObjectURL(blob);
+
+  const a=
+    document.createElement('a');
+
+  a.href=url;
+  a.download=filename;
+
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+
+  URL.revokeObjectURL(url);
+}
+
+$('csvDay').addEventListener(
+  'click',
+  ()=>{
+    if(!staffShifts.length){
+      alert(
+        'CSVに出力するシフトがありません'
+      );
+      return;
+    }
+
+    const date=
+      $('staffDate').value||
+      localDateStr();
+
+    downloadCsv(
+      `shift_${date}.csv`,
+      shiftCsvRows(
+        staffShifts,
+        date
+      )
+    );
+  }
+);
+
+$('csvRange').addEventListener(
+  'click',
+  async()=>{
+    const from=
+      $('csvFrom').value;
+
+    const to=
+      $('csvTo').value;
+
+    if(!from||!to){
+      alert(
+        '開始日と終了日を入力してください'
+      );
+      return;
+    }
+
+    if(from>to){
+      alert(
+        '終了日は開始日以降にしてください'
+      );
+      return;
+    }
+
+    const rows=[];
+    const cursor=
+      new Date(
+        from+'T00:00:00'
+      );
+
+    const end=
+      new Date(
+        to+'T00:00:00'
+      );
+
+    try{
+      while(cursor<=end){
+        const date=
+          localDateStr(cursor);
+
+        const result=
+          await callShiftApi(
+            'list_day',
+            {workDate:date}
+          );
+
+        const shifts=
+          (result.shifts||[])
+          .map(normalizeShift);
+
+        rows.push(
+          ...shiftCsvRows(
+            shifts,
+            date
+          )
+        );
+
+        cursor.setDate(
+          cursor.getDate()+1
+        );
+      }
+
+      if(!rows.length){
+        alert(
+          '指定期間にシフトがありません'
+        );
+        return;
+      }
+
+      downloadCsv(
+        `shift_${from}_${to}.csv`,
+        rows
+      );
+
+    }catch(err){
+      alert(err.message);
+    }
+  }
+);function getBoardPosts(){
+  try{
+    return JSON.parse(
+      localStorage.getItem('mtBoardPosts')||'[]'
+    );
+  }catch(e){
+    return [];
+  }
+}
+
+function saveBoardPosts(posts){
+  localStorage.setItem(
+    'mtBoardPosts',
+    JSON.stringify(posts)
+  );
+}
+
+function renderBoard(){
+  const box=$('boardList');
+  const posts=getBoardPosts();
+
+  if(!posts.length){
+    box.innerHTML=`
+      <div class="empty">
+        現在、お知らせはありません。
+      </div>
+    `;
+    return;
+  }
+
+  box.innerHTML=posts
+    .slice()
+    .reverse()
+    .map((p,index)=>`
+      <div class="boarditem ${p.priority==='important'?'important':''}">
+        ${
+          p.priority==='important'
+            ? '<span class="badge">重要</span>'
+            : '<span class="badge">お知らせ</span>'
+        }
+
+        <h3 style="margin:9px 0 5px">
+          ${esc(p.title)}
+        </h3>
+
+        <div style="font-size:13px;line-height:1.8">
+          ${esc(p.body).replace(/\n/g,'<br>')}
+        </div>
+
+        <div class="muted" style="margin-top:8px">
+          ${esc(p.date||'')}
+        </div>
+
+        <label class="check" style="margin-top:10px">
+          <input type="checkbox"
+            ${p.confirmed?'checked':''}
+            onchange="confirmBoardPost(${posts.length-1-index},this.checked)">
+          <span>確認しました</span>
+        </label>
+      </div>
+    `).join('');
+}
+
+window.confirmBoardPost=function(index,checked){
+  const posts=getBoardPosts();
+
+  if(!posts[index])return;
+
+  posts[index].confirmed=checked;
+
+  saveBoardPosts(posts);
+};
+
+$('addPost').addEventListener(
+  'click',
+  ()=>{
+    if(currentEmployee?.role!=='admin'){
+      alert('管理者のみ掲載できます');
+      return;
+    }
+
+    const title=
+      $('postTitle').value.trim();
+
+    const body=
+      $('postBody').value.trim();
+
+    const priority=
+      $('postPriority').value;
+
+    if(!title||!body){
+      alert('タイトルと内容を入力してください');
+      return;
+    }
+
+    const posts=getBoardPosts();
+
+    posts.push({
+      title,
+      body,
+      priority,
+      date:new Date().toLocaleString('ja-JP'),
+      confirmed:false
+    });
+
+    saveBoardPosts(posts);
+
+    $('postTitle').value='';
+    $('postBody').value='';
+    $('postPriority').value='normal';
+
+    renderBoard();
+
+    alert('掲示板へ掲載しました');
+  }
+);
+
+$('previewMessage').addEventListener(
+  'click',
+  ()=>{
+    if(currentEmployee?.role!=='admin'){
+      alert('管理者のみ利用できます');
+      return;
+    }
+
+    const target=
+      $('messageTarget').value;
+
+    const body=
+      $('messageBody').value.trim();
+
+    if(!body){
+      alert('本文を入力してください');
+      return;
+    }
+
+    const text=
+      `【エムティ流通株式会社】\n`+
+      `送信先：${target}\n\n`+
+      body;
+
+    $('messagePreview').innerHTML=`
+      <div class="linebox">
+        <b>LINE共有プレビュー</b>
+
+        <div style="white-space:pre-wrap;font-size:12px;line-height:1.8;margin:10px 0">
+          ${esc(text)}
+        </div>
+
+        <button class="primary linebtn"
+          id="shareLineMessage">
+          LINEで共有
+        </button>
+      </div>
+    `;
+
+    $('shareLineMessage')
+      .addEventListener(
+        'click',
+        async()=>{
+          try{
+            if(
+              typeof liff!=='undefined' &&
+              liff.isApiAvailable(
+                'shareTargetPicker'
+              )
+            ){
+              await liff.shareTargetPicker([
+                {
+                  type:'text',
+                  text
+                }
+              ]);
+            }else{
+              await navigator.clipboard.writeText(
+                text
+              );
+
+              alert(
+                'LINE共有が利用できないため、文章をコピーしました。'
+              );
+            }
+          }catch(err){
+            console.error(err);
+
+            alert(
+              'LINE共有をキャンセル、または共有できませんでした。'
+            );
+          }
+        }
+      );
+  }
+);
+
+function setAdminVisibility(){
+  const isAdmin=
+    currentEmployee?.role==='admin';
+
+  document
+    .querySelectorAll(
+      '#board .adminbox'
+    )
+    .forEach(el=>{
+      el.style.display=
+        isAdmin?'block':'none';
+    });
+
+  if(isAdmin){
+    $('adminShiftArea')
+      .classList
+      .remove('hide');
+  }else{
+    $('adminShiftArea')
+      .classList
+      .add('hide');
+  }
+}
+
+const originalLoadEmployeeStatus=
+  loadEmployeeStatus;
+
+loadEmployeeStatus=async function(){
+  await originalLoadEmployeeStatus();
+  setAdminVisibility();
+
+  if(
+    currentEmployee?.role==='admin' &&
+    currentEmployee?.approval_status==='approved'
+  ){
+    await loadRequests();
+  }
+};
+
+function setInitialDates(){
+  const today=localDateStr();
+
+  $('workDate').value=today;
+  $('staffDate').value=today;
+  $('csvFrom').value=today;
+  $('csvTo').value=today;
+}
+
+window.addEventListener(
+  'pageshow',
+  ()=>{
+    if(
+      lineIdToken &&
+      currentEmployee?.approval_status==='approved'
+    ){
+      loadMyShifts();
+
+      if(
+        currentEmployee?.role==='admin' &&
+        document.querySelector('#staffing.on')
+      ){
+        loadStaffing();
+      }
+    }
+  }
+);
+
+document.addEventListener(
+  'visibilitychange',
+  ()=>{
+    if(
+      document.visibilityState==='visible' &&
+      lineIdToken &&
+      currentEmployee?.approval_status==='approved'
+    ){
+      loadMyShifts();
+    }
+  }
+);
+
+async function startApp(){
+  setInitialDates();
+  initRegister();
+  initNeedGrid();
+  switchStaffView('list');
+  renderBoard();
+
+  await initLine();
+}
+
+startApp();
+</script>
+</body>
+</html>
