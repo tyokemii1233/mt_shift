@@ -1,4 +1,4 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>エムティ流通 社内アプリ v15</title><style>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>エムティ流通 社内アプリ v16</title><style>
 :root{--bg:#fff9f7;--card:#fff;--ink:#5b4544;--muted:#9b8582;--line:#f0dedc;--accent:#c98f91;--accent2:#f6e2e1;--cream:#fff4eb;--shadow:0 8px 28px rgba(118,77,77,.08)}*{box-sizing:border-box}body{margin:0;font-family:Meiryo,"メイリオ",sans-serif;background:linear-gradient(180deg,#fff7f4 0,#fffaf8 45%,#fff 100%);color:var(--ink)}button,input,select,textarea{font-family:Meiryo,"メイリオ",sans-serif}.app{max-width:520px;margin:auto;padding:22px 16px 110px}.head{padding:14px 4px 10px}.head:before{content:"SHIFT & WORK";display:block;font-size:10px;letter-spacing:.22em;color:var(--accent);font-weight:700;margin-bottom:5px}.head h1{margin:0;font-size:27px;letter-spacing:.02em}.head small{color:var(--muted)}.tabs{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);width:min(calc(100% - 24px),496px);display:grid;grid-template-columns:repeat(5,1fr);gap:5px;background:rgba(255,255,255,.96);padding:7px;border:1px solid var(--line);border-radius:22px;z-index:20;box-shadow:0 10px 35px rgba(111,70,70,.16);backdrop-filter:blur(12px)}.tab{border:0;background:transparent;padding:10px 3px 8px;border-radius:16px;font-weight:700;color:var(--muted);font-size:12px}.tab:before{display:block;font-size:20px;margin-bottom:2px}.tab[data-page="mypage"]:before{content:"♡"}.tab[data-page="register"]:before{content:"＋"}.tab[data-page="shifts"]:before{content:"▣"}.tab[data-page="staffing"]:before{content:"▥"}.tab.on{background:var(--accent2);color:#8c5e60}.page{display:none}.page.on{display:block}.card{background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:25px;padding:20px 17px;margin:13px 0;box-shadow:var(--shadow)}h2{font-size:20px;margin:0 0 5px;color:#6c5050}.sub{font-size:12px;color:var(--muted);margin:0 0 15px;line-height:1.7}label{font-size:12px;font-weight:700;display:block;margin:14px 2px 6px;color:#735b59}.req{color:#c96e75}input,select,textarea{width:100%;padding:13px 14px;border:1px solid #ead8d5;border-radius:15px;background:#fffcfb;font-size:15px;color:var(--ink);outline:none;transition:.2s}input:focus,select:focus,textarea:focus{border-color:#d4a5a5;box-shadow:0 0 0 3px #f9e9e8;background:#fff}textarea{min-height:90px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:9px}.primary,.secondary,.mini{border-radius:15px;font-weight:700;cursor:pointer}.primary{width:100%;padding:14px;margin-top:16px;background:linear-gradient(135deg,#c98f91,#b77d80);color:#fff;border:0;box-shadow:0 7px 18px rgba(185,124,128,.22)}.secondary{width:100%;padding:12px;margin-top:9px;background:#fff;border:1px solid #e5cecc;color:#775b59}.mini{padding:8px 11px;background:#fff7f5;border:1px solid #ead6d3;color:#805f5e}.summary{display:flex;gap:13px;align-items:center;background:linear-gradient(135deg,#fff4ef,#fbe9e7);border-radius:20px;padding:14px;margin-bottom:12px}.avatar{width:56px;height:56px;border-radius:18px;background:#fff;display:grid;place-items:center;font-size:25px;box-shadow:0 4px 15px #9d6f6f12}.muted{color:var(--muted);font-size:12px}.shift{padding:15px 14px;margin:10px 0;border:1px solid var(--line);border-radius:18px;background:linear-gradient(135deg,#fff,#fff9f7)}.shift:last-child{border-bottom:1px solid var(--line)}.shift b{font-size:15px;color:#684e4e}.actions{display:flex;gap:7px;margin-top:10px}.copybox{background:#fff9f6;border:1px solid #edd8d4;border-radius:18px;padding:14px;margin-top:12px}.checks{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:9px}.check{display:flex;align-items:center;gap:7px;border:1px solid #ead9d6;background:#fff;border-radius:13px;padding:10px;font-size:12px}.check input{width:20px;height:20px;accent-color:#bd8184}.check:has(input:checked){border-color:#c99092;background:#fcebea}.hide{display:none}.notice{font-size:11px;line-height:1.7;background:#fff8e9;border:1px solid #f1dfb9;padding:11px;border-radius:14px;margin-top:11px;color:#816e55}.ok{font-size:12px;background:#f1f7ef;border:1px solid #dcebd8;padding:11px;border-radius:13px;margin-top:10px}.empty{text-align:center;color:#aa9693;padding:30px 5px}.bank{margin-top:10px;padding-top:4px;border-top:1px dashed #e4cbc8}.pill{display:inline-block;font-size:10px;background:#fff;border:1px solid #ead8d5;border-radius:99px;padding:5px 8px;margin:4px 3px 0 0;color:#866b68}.copybox>b{color:#8a6262}.card>h2:after{content:"";display:block;width:34px;height:3px;border-radius:5px;background:#e6b8b7;margin-top:8px;margin-bottom:14px}@media(max-width:370px){.checks{grid-template-columns:1fr}.row{grid-template-columns:1fr}.app{padding-left:12px;padding-right:12px}}
 .boarditem{padding:14px;border:1px solid var(--line);border-radius:16px;margin:10px 0;background:#fff}.boarditem.important{border-color:#d9a8b4;background:#fff8fa}.badge{display:inline-block;padding:4px 8px;border-radius:99px;font-size:11px;font-weight:800;background:#f2e3e7;color:#80515d}.adminbox{background:#fffaf5;border:1px solid #eadfd5;border-radius:18px;padding:15px;margin:13px 0}.nav4{grid-template-columns:repeat(4,1fr)!important}
 .linebox{background:#f3fbf5;border:1px solid #bce3c8;border-radius:19px;padding:15px;margin:14px 0}.linebtn{background:#06c755!important;box-shadow:none!important}.statusdot{display:inline-block;width:9px;height:9px;background:#e0a67b;border-radius:50%;margin-right:7px}.statusdot.connected{background:#06c755}.linehelp{font-size:12px;line-height:1.8;color:#68776a}.lineuser{font-size:13px;font-weight:700;margin:10px 0}.lineuser img{width:34px;height:34px;border-radius:50%;vertical-align:middle;margin-right:8px}.lineactions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.lineactions button{margin-top:6px} 
@@ -11,8 +11,21 @@
 /* v13 人員配置ダッシュボード */
 .shortage-panel{margin:14px 0;padding:15px;border-radius:18px;background:#fff0f1;border:1px solid #e8b7bd}.shortage-panel h3{margin:0 0 9px;font-size:15px;color:#9b4f59}.shortage-row{display:grid;grid-template-columns:88px 1fr auto;gap:8px;align-items:center;padding:9px 0;border-bottom:1px solid #f0d7da;font-size:12px}.shortage-row:last-child{border-bottom:0}.shortage-row b{font-size:13px}.shortage-num{font-weight:800;color:#a84f5b;background:#fff;padding:5px 8px;border-radius:99px}.allgood-panel{margin:14px 0;padding:14px;border-radius:18px;background:#f1f7ef;border:1px solid #dcebd8;font-size:12px}.staff-total{background:linear-gradient(135deg,#fff4ef,#fbe9e7);border:1px solid #efd8d5;border-radius:18px;padding:14px;margin:12px 0}.staff-total b{font-size:28px;color:#795758}.staff-total span{font-size:12px;color:var(--muted);margin-left:5px}.staff-total .names{margin-top:8px;font-size:11px;line-height:1.8;color:#7d6663}.sectioncap{font-size:13px;font-weight:800;margin:18px 2px 8px;color:#735b59}.hourcard.bad{box-shadow:0 5px 16px rgba(178,74,87,.08)}
 .authgate{padding:15px 16px;margin:12px 0;border-radius:18px;font-size:13px;line-height:1.7;font-weight:700}.authgate.pending{background:#fff8e9;border:1px solid #f1dfb9;color:#816e55}.authgate.approved{background:#f1f7ef;border:1px solid #dcebd8;color:#55705a}.authgate.rejected{background:#fff0f1;border:1px solid #e8b7bd;color:#9b4f59}.tab.locked{opacity:.38;pointer-events:none}
-</style></head><body><div class="app"><div class="head"><h1>シフト管理</h1><small>エムティ流通株式会社｜社内アプリ v15</small></div><div class="tabs"><button class="tab on" data-page="mypage">マイページ</button><button class="tab" data-page="register">シフト登録</button><button class="tab" data-page="shifts">シフト確認</button><button class="tab" data-page="staffing">人員配置</button><button class="tab" data-page="board">掲示板</button></div>
-<div class="linebox"><b>🟢 LINE連携</b><div class="linehelp" id="lineStatus"><span class="statusdot"></span>未接続（デモモード）</div><div id="lineUser" class="lineuser"></div><div class="lineactions"><button class="mini" id="lineLogin">LINEでログイン</button><button class="mini" id="lineLogout">ログアウト</button></div><details style="margin-top:12px"><summary style="font-size:12px;cursor:pointer">⚙️ LINE接続設定（管理者・開発者向け）</summary><label>LIFF ID</label><input id="liffId" placeholder="例：1234567890-AbCdEfGh" autocomplete="off"><button class="secondary" id="saveLiff">LIFF IDを保存して初期化</button><p class="linehelp">LINE Developersで発行したLIFF IDを入力してください。HTTPS公開とエンドポイントURL設定が必要です。チャネルシークレットやアクセストークンは絶対にここへ入力しないでください。</p></details></div><div id="authGate" class="hide"></div><section id="mypage" class="page on"><div class="card"><h2>👤 マイページ</h2><p class="sub">最初に従業員情報を登録してください。</p><div id="profileSummary" class="hide"></div>
+.approval-admin{background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;margin:12px 0}
+.approval-admin h2{margin:0 0 8px}
+.approval-row{border:1px solid var(--line);border-radius:16px;padding:13px;margin:10px 0;background:#fffaf8}
+.approval-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.approve-btn{background:#edf7ee;border:1px solid #bdd9c2;color:#42664a}
+.reject-btn{background:#fff0f1;border:1px solid #e7bdc2;color:#98545c}
+.admin-tag{display:inline-block;background:#f2e3e7;color:#80515d;border-radius:99px;padding:3px 8px;font-size:11px;font-weight:800;margin-left:6px}
+</style></head><body><div class="app"><div class="head"><h1>シフト管理</h1><small>エムティ流通株式会社｜社内アプリ v16</small></div><div class="tabs"><button class="tab on" data-page="mypage">マイページ</button><button class="tab" data-page="register">シフト登録</button><button class="tab" data-page="shifts">シフト確認</button><button class="tab" data-page="staffing">人員配置</button><button class="tab" data-page="board">掲示板</button></div>
+<div class="linebox"><b>🟢 LINE連携</b><div class="linehelp" id="lineStatus"><span class="statusdot"></span>未接続（デモモード）</div><div id="lineUser" class="lineuser"></div><div class="lineactions"><button class="mini" id="lineLogin">LINEでログイン</button><button class="mini" id="lineLogout">ログアウト</button></div><details style="margin-top:12px"><summary style="font-size:12px;cursor:pointer">⚙️ LINE接続設定（管理者・開発者向け）</summary><label>LIFF ID</label><input id="liffId" placeholder="例：1234567890-AbCdEfGh" autocomplete="off"><button class="secondary" id="saveLiff">LIFF IDを保存して初期化</button><p class="linehelp">LINE Developersで発行したLIFF IDを入力してください。HTTPS公開とエンドポイントURL設定が必要です。チャネルシークレットやアクセストークンは絶対にここへ入力しないでください。</p></details></div><div id="authGate" class="hide"></div>
+<div id="approvalAdmin" class="approval-admin hide">
+  <h2>🔐 従業員承認 <span class="admin-tag">管理者のみ</span></h2>
+  <p class="sub">初回LINE登録した従業員をここから承認・却下できます。</p>
+  <button class="secondary" id="refreshPending" type="button">承認待ちを更新</button>
+  <div id="pendingEmployees"><div class="muted">読み込み待ちです</div></div>
+</div><section id="mypage" class="page on"><div class="card"><h2>👤 マイページ</h2><p class="sub">最初に従業員情報を登録してください。</p><div id="profileSummary" class="hide"></div>
 <label>名前 <span class="req">*</span></label><input id="name" placeholder="例：遠藤 未菜">
 <label>フリガナ</label><input id="kana" placeholder="例：エンドウ ミナ">
 <label>生年月日</label><input id="birth" type="date">
@@ -119,8 +132,67 @@ async function verifyEmployee(){
     authState.employee=data.employee||null;
     const status=data.approved===true?'approved':(data.status||data.employee?.approval_status||'pending');
     setAuthGate(status,data.message);
+    updateAdminUI();
   }catch(e){console.error(e);setAuthGate('pending','社内認証サーバーに接続できませんでした。管理者へお問い合わせください。')}
 }
+
+function isAdmin(){
+  return authState.approved && authState.employee && authState.employee.role==='admin';
+}
+function updateAdminUI(){
+  const box=$('approvalAdmin');
+  if(!box)return;
+  box.classList.toggle('hide',!isAdmin());
+  if(isAdmin()) loadPendingEmployees();
+}
+async function callAdmin(action,extra={}){
+  if(!lineReady||!liff.isLoggedIn())throw new Error('LINEログインが必要です');
+  const idToken=liff.getIDToken();
+  if(!idToken)throw new Error('LINE認証情報を取得できません');
+  const res=await fetch(LINE_AUTH_URL,{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({idToken,action,...extra})
+  });
+  const data=await res.json().catch(()=>({}));
+  if(!res.ok||data.ok===false)throw new Error(data.error||'処理に失敗しました');
+  return data;
+}
+async function loadPendingEmployees(){
+  if(!isAdmin())return;
+  const area=$('pendingEmployees');
+  area.innerHTML='<div class="muted">読み込み中...</div>';
+  try{
+    const data=await callAdmin('list_pending');
+    const rows=data.employees||[];
+    if(!rows.length){
+      area.innerHTML='<div class="ok">現在、承認待ちの従業員はいません。</div>';
+      return;
+    }
+    area.innerHTML=rows.map(e=>`<div class="approval-row">
+      <b>${esc(e.name||'名前未登録')}</b>
+      <div class="muted">${e.department?esc(e.department)+' ／ ':''}申請日時：${esc((e.created_at||'').replace('T',' ').slice(0,16))}</div>
+      <div class="approval-actions">
+        <button class="approve-btn" onclick="decideEmployee('${e.id}','approved')">✓ 承認</button>
+        <button class="reject-btn" onclick="decideEmployee('${e.id}','rejected')">却下</button>
+      </div>
+    </div>`).join('');
+  }catch(e){
+    console.error(e);
+    area.innerHTML='<div class="authgate rejected">'+esc(e.message)+'</div>';
+  }
+}
+window.decideEmployee=async(id,status)=>{
+  const label=status==='approved'?'承認':'却下';
+  if(!confirm('この従業員を'+label+'しますか？'))return;
+  try{
+    await callAdmin('set_approval',{employeeId:id,status});
+    await loadPendingEmployees();
+    alert(label+'しました');
+  }catch(e){alert(e.message)}
+};
+if($('refreshPending'))$('refreshPending').onclick=()=>loadPendingEmployees();
+
 async function initLine(){const id=localStorage.getItem('mtLiffId')||'';$('liffId').value=id;if(!id){lineStatus('LIFF ID未設定・デモモード');return}if(typeof liff==='undefined'){lineStatus('LINE SDKを読み込めません（ネット接続をご確認ください）');return}try{await liff.init({liffId:id});lineReady=true;if(liff.isLoggedIn()){const p=await liff.getProfile();lineStatus('LINEログイン済み',true);$('lineUser').innerHTML=(p.pictureUrl?'<img src="'+esc(p.pictureUrl)+'" alt="">':'')+esc(p.displayName);await verifyEmployee();}else{lineStatus('LINEログイン待ち');setAuthGate('pending','LINEでログインしてください。')}}catch(e){lineStatus('接続エラー：LIFF IDと公開URLを確認してください');console.error(e)}}
 $('saveLiff').onclick=()=>{const id=$('liffId').value.trim();if(!/^[0-9]+-[A-Za-z0-9_-]+$/.test(id)){alert('正しいLIFF IDを入力してください');return}localStorage.setItem('mtLiffId',id);location.reload()};
 $('lineLogin').onclick=async()=>{if(!lineReady){alert('LIFF IDを設定し、HTTPSで公開したアプリから開いてください');return}if(!liff.isLoggedIn())liff.login({redirectUri:location.href});else{await verifyEmployee();alert(authState.approved?'LINEログイン・社内認証済みです':'LINEログイン済みです。現在は管理者の承認待ちです')}};
