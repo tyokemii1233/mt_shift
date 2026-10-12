@@ -32,7 +32,45 @@
 <div id="lineUser" class="lineuser"></div>
 <div id="authGate" class="authgate pending">⏳ 社内利用状況を確認しています...</div>
 <div class="summary"><div class="avatar">👤</div><div><b id="profileName">未設定</b><div class="muted" id="profileDept">部署未設定</div></div></div>
-<div id="approvalAdmin" class="approval-admin hide"><h2>👥 従業員承認</h2><p class="sub">管理者のみ表示されています。</p><button class="secondary" id="refreshPending">承認待ちを更新</button><div id="pendingEmployees"></div></div>
+<div id="profileEditArea" style="margin-top:16px;">
+  <label>
+    氏名
+    <span class="req">*</span>
+  </label>
+  <input
+    type="text"
+    id="profileNameInput"
+    placeholder="氏名を入力"
+    maxlength="50"
+  >
+
+  <label style="margin-top:12px;">
+    部署
+    <span class="req">*</span>
+  </label>
+  <select id="profileDepartmentInput">
+    <option value="">部署を選択してください</option>
+    <option value="出荷">出荷</option>
+    <option value="入荷">入荷</option>
+    <option value="リフト">リフト</option>
+    <option value="事務">事務</option>
+    <option value="その他">その他</option>
+  </select>
+
+  <button
+    class="primary"
+    id="saveProfile"
+    style="margin-top:14px;"
+  >
+    プロフィールを保存
+  </button>
+
+  <div
+    id="profileSaveMessage"
+    class="muted"
+    style="margin-top:8px;"
+  ></div>
+</div><div id="approvalAdmin" class="approval-admin hide"><h2>👥 従業員承認</h2><p class="sub">管理者のみ表示されています。</p><button class="secondary" id="refreshPending">承認待ちを更新</button><div id="pendingEmployees"></div></div>
 <div class="notice">このアプリでは、本人確認・利用承認・シフト管理に必要な情報のみ利用します。住所、電話番号、生年月日、銀行口座、マイナンバー等の不要な個人情報は収集しません。</div>
 </div></section>
 
@@ -72,7 +110,7 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const LIFF_ID='2011979112-zRK9twVc';
 const SHIFT_API_URL='https://xgkmvmxuwjzbyywanfnq.supabase.co/functions/v1/shift-api';
-
+const PROFILE_API_URL = "https://xgkmvmxuwjzbyywanfnq.supabase.co/functions/v1/profile-api";
 const breakOptions=[
 ['none','休憩なし'],
 ['10:30-10:45','10:30〜10:45'],
@@ -2652,7 +2690,151 @@ async function startApp(){
   await initLine();
 }
 
-startApp();
+// ===== プロフィール編集 =====
+
+async function saveMyProfile() {
+  const nameInput = document.getElementById("profileNameInput");
+  const departmentInput = document.getElementById("profileDepartmentInput");
+  const message = document.getElementById("profileSaveMessage");
+  const saveButton = document.getElementById("saveProfile");
+
+  const name = nameInput.value.trim();
+  const department = departmentInput.value;
+
+  if (!name) {
+    message.textContent = "氏名を入力してください";
+    return;
+  }
+
+  if (!department) {
+    message.textContent = "部署を選択してください";
+    return;
+  }
+
+  try {
+    saveButton.disabled = true;
+    saveButton.textContent = "保存中...";
+    message.textContent = "";
+
+    const idToken = liff.getIDToken();
+
+    if (!idToken) {
+      throw new Error("LINE認証情報を取得できませんでした");
+    }
+
+    const response = await fetch(PROFILE_API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        idToken: idToken,
+        action: "update",
+        name: name,
+        department: department,
+      }),
+    });
+
+    const result = await response.json();
+
+    if (!response.ok || !result.ok) {
+      throw new Error(
+        result.error || "プロフィールを保存できませんでした"
+      );
+    }
+
+    const employee = result.employee;
+
+    document.getElementById("profileName").textContent =
+      employee.name || "未設定";
+
+    document.getElementById("profileDept").textContent =
+      employee.department || "部署未設定";
+
+    nameInput.value = employee.name || "";
+    departmentInput.value = employee.department || "";
+
+    message.textContent = "プロフィールを保存しました";
+
+  } catch (error) {
+    console.error(error);
+    message.textContent =
+      error.message || "プロフィールの保存に失敗しました";
+  } finally {
+    saveButton.disabled = false;
+    saveButton.textContent = "プロフィールを保存";
+  }
+}
+
+
+// 現在のプロフィールを入力欄に表示
+async function loadMyProfileEditor() {
+  const nameInput = document.getElementById("profileNameInput");
+  const departmentInput = document.getElementById("profileDepartmentInput");
+
+  if (!nameInput || !departmentInput) {
+    return;
+  }
+
+  try {
+    const idToken = liff.getIDToken();
+
+    if (!idToken) {
+      return;
+    }
+
+    const response = await fetch(PROFILE_API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        idToken: idToken,
+        action: "get",
+      }),
+    });
+
+    const result = await response.json();
+
+    if (!response.ok || !result.ok) {
+      console.error(result.error);
+      return;
+    }
+
+    const employee = result.employee;
+
+    nameInput.value = employee.name || "";
+    departmentInput.value = employee.department || "";
+
+    document.getElementById("profileName").textContent =
+      employee.name || "未設定";
+
+    document.getElementById("profileDept").textContent =
+      employee.department || "部署未設定";
+
+  } catch (error) {
+    console.error("プロフィール取得エラー:", error);
+  }
+}
+
+
+// 保存ボタン
+document
+  .getElementById("saveProfile")
+  ?.addEventListener("click", saveMyProfile);
+
+
+// LINE認証完了後にプロフィールを読み込む
+window.addEventListener("load", async () => {
+  try {
+    await new Promise(resolve => setTimeout(resolve, 1200));
+    await loadMyProfileEditor();
+  } catch (error) {
+    console.error(error);
+  }
+});
+  
+  startApp();
 </script>
 </body>
 </html>
