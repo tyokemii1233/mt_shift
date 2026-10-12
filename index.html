@@ -1,4 +1,4 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>エムティ流通 社内アプリ v17</title><style>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>エムティ流通 社内アプリ v18</title><style>
 :root{--bg:#fff9f7;--card:#fff;--ink:#5b4544;--muted:#9b8582;--line:#f0dedc;--accent:#c98f91;--accent2:#f6e2e1;--cream:#fff4eb;--shadow:0 8px 28px rgba(118,77,77,.08)}*{box-sizing:border-box}body{margin:0;font-family:Meiryo,"メイリオ",sans-serif;background:linear-gradient(180deg,#fff7f4 0,#fffaf8 45%,#fff 100%);color:var(--ink)}button,input,select,textarea{font-family:Meiryo,"メイリオ",sans-serif}.app{max-width:520px;margin:auto;padding:22px 16px 110px}.head{padding:14px 4px 10px}.head:before{content:"SHIFT & WORK";display:block;font-size:10px;letter-spacing:.22em;color:var(--accent);font-weight:700;margin-bottom:5px}.head h1{margin:0;font-size:27px;letter-spacing:.02em}.head small{color:var(--muted)}.tabs{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);width:min(calc(100% - 24px),496px);display:grid;grid-template-columns:repeat(5,1fr);gap:5px;background:rgba(255,255,255,.96);padding:7px;border:1px solid var(--line);border-radius:22px;z-index:20;box-shadow:0 10px 35px rgba(111,70,70,.16);backdrop-filter:blur(12px)}.tab{border:0;background:transparent;padding:10px 3px 8px;border-radius:16px;font-weight:700;color:var(--muted);font-size:12px}.tab:before{display:block;font-size:20px;margin-bottom:2px}.tab[data-page="mypage"]:before{content:"♡"}.tab[data-page="register"]:before{content:"＋"}.tab[data-page="shifts"]:before{content:"▣"}.tab[data-page="staffing"]:before{content:"▥"}.tab.on{background:var(--accent2);color:#8c5e60}.page{display:none}.page.on{display:block}.card{background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:25px;padding:20px 17px;margin:13px 0;box-shadow:var(--shadow)}h2{font-size:20px;margin:0 0 5px;color:#6c5050}.sub{font-size:12px;color:var(--muted);margin:0 0 15px;line-height:1.7}label{font-size:12px;font-weight:700;display:block;margin:14px 2px 6px;color:#735b59}.req{color:#c96e75}input,select,textarea{width:100%;padding:13px 14px;border:1px solid #ead8d5;border-radius:15px;background:#fffcfb;font-size:15px;color:var(--ink);outline:none;transition:.2s}input:focus,select:focus,textarea:focus{border-color:#d4a5a5;box-shadow:0 0 0 3px #f9e9e8;background:#fff}textarea{min-height:90px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:9px}.primary,.secondary,.mini{border-radius:15px;font-weight:700;cursor:pointer}.primary{width:100%;padding:14px;margin-top:16px;background:linear-gradient(135deg,#c98f91,#b77d80);color:#fff;border:0;box-shadow:0 7px 18px rgba(185,124,128,.22)}.secondary{width:100%;padding:12px;margin-top:9px;background:#fff;border:1px solid #e5cecc;color:#775b59}.mini{padding:8px 11px;background:#fff7f5;border:1px solid #ead6d3;color:#805f5e}.summary{display:flex;gap:13px;align-items:center;background:linear-gradient(135deg,#fff4ef,#fbe9e7);border-radius:20px;padding:14px;margin-bottom:12px}.avatar{width:56px;height:56px;border-radius:18px;background:#fff;display:grid;place-items:center;font-size:25px;box-shadow:0 4px 15px #9d6f6f12}.muted{color:var(--muted);font-size:12px}.shift{padding:15px 14px;margin:10px 0;border:1px solid var(--line);border-radius:18px;background:linear-gradient(135deg,#fff,#fff9f7)}.shift:last-child{border-bottom:1px solid var(--line)}.shift b{font-size:15px;color:#684e4e}.actions{display:flex;gap:7px;margin-top:10px}.copybox{background:#fff9f6;border:1px solid #edd8d4;border-radius:18px;padding:14px;margin-top:12px}.checks{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:9px}.check{display:flex;align-items:center;gap:7px;border:1px solid #ead9d6;background:#fff;border-radius:13px;padding:10px;font-size:12px}.check input{width:20px;height:20px;accent-color:#bd8184}.check:has(input:checked){border-color:#c99092;background:#fcebea}.hide{display:none}.notice{font-size:11px;line-height:1.7;background:#fff8e9;border:1px solid #f1dfb9;padding:11px;border-radius:14px;margin-top:11px;color:#816e55}.ok{font-size:12px;background:#f1f7ef;border:1px solid #dcebd8;padding:11px;border-radius:13px;margin-top:10px}.empty{text-align:center;color:#aa9693;padding:30px 5px}.bank{margin-top:10px;padding-top:4px;border-top:1px dashed #e4cbc8}.pill{display:inline-block;font-size:10px;background:#fff;border:1px solid #ead8d5;border-radius:99px;padding:5px 8px;margin:4px 3px 0 0;color:#866b68}.copybox>b{color:#8a6262}.card>h2:after{content:"";display:block;width:34px;height:3px;border-radius:5px;background:#e6b8b7;margin-top:8px;margin-bottom:14px}@media(max-width:370px){.checks{grid-template-columns:1fr}.row{grid-template-columns:1fr}.app{padding-left:12px;padding-right:12px}}
 .boarditem{padding:14px;border:1px solid var(--line);border-radius:16px;margin:10px 0;background:#fff}.boarditem.important{border-color:#d9a8b4;background:#fff8fa}.badge{display:inline-block;padding:4px 8px;border-radius:99px;font-size:11px;font-weight:800;background:#f2e3e7;color:#80515d}.adminbox{background:#fffaf5;border:1px solid #eadfd5;border-radius:18px;padding:15px;margin:13px 0}.nav4{grid-template-columns:repeat(4,1fr)!important}
 .linebox{background:#f3fbf5;border:1px solid #bce3c8;border-radius:19px;padding:15px;margin:14px 0}.linebtn{background:#06c755!important;box-shadow:none!important}.statusdot{display:inline-block;width:9px;height:9px;background:#e0a67b;border-radius:50%;margin-right:7px}.statusdot.connected{background:#06c755}.linehelp{font-size:12px;line-height:1.8;color:#68776a}.lineuser{font-size:13px;font-weight:700;margin:10px 0}.lineuser img{width:34px;height:34px;border-radius:50%;vertical-align:middle;margin-right:8px}.lineactions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.lineactions button{margin-top:6px} 
@@ -18,7 +18,7 @@
 .approve-btn{background:#edf7ee;border:1px solid #bdd9c2;color:#42664a}
 .reject-btn{background:#fff0f1;border:1px solid #e7bdc2;color:#98545c}
 .admin-tag{display:inline-block;background:#f2e3e7;color:#80515d;border-radius:99px;padding:3px 8px;font-size:11px;font-weight:800;margin-left:6px}
-</style></head><body><div class="app"><div class="head"><h1>シフト管理</h1><small>エムティ流通株式会社｜社内アプリ v17</small></div><div class="tabs"><button class="tab on" data-page="mypage">マイページ</button><button class="tab" data-page="register">シフト登録</button><button class="tab" data-page="shifts">シフト確認</button><button class="tab" data-page="staffing">人員配置</button><button class="tab" data-page="board">掲示板</button></div>
+</style></head><body><div class="app"><div class="head"><h1>シフト管理</h1><small>エムティ流通株式会社｜社内アプリ v18</small></div><div class="tabs"><button class="tab on" data-page="mypage">マイページ</button><button class="tab" data-page="register">シフト登録</button><button class="tab" data-page="shifts">シフト確認</button><button class="tab" data-page="staffing">人員配置</button><button class="tab" data-page="board">掲示板</button></div>
 <div class="linebox"><b>🟢 LINE連携</b><div class="linehelp" id="lineStatus"><span class="statusdot"></span>未接続（デモモード）</div><div id="lineUser" class="lineuser"></div><div class="lineactions"><button class="mini" id="lineLogin">LINEでログイン</button><button class="mini" id="lineLogout">ログアウト</button></div><details style="margin-top:12px"><summary style="font-size:12px;cursor:pointer">⚙️ LINE接続設定（管理者・開発者向け）</summary><label>LIFF ID</label><input id="liffId" placeholder="例：1234567890-AbCdEfGh" autocomplete="off"><button class="secondary" id="saveLiff">LIFF IDを保存して初期化</button><p class="linehelp">LINE Developersで発行したLIFF IDを入力してください。HTTPS公開とエンドポイントURL設定が必要です。チャネルシークレットやアクセストークンは絶対にここへ入力しないでください。</p></details></div><div id="authGate" class="hide"></div>
 <div id="approvalAdmin" class="approval-admin hide">
   <h2>🔐 従業員承認 <span class="admin-tag">管理者のみ</span></h2>
@@ -35,8 +35,8 @@
 <div class="copybox"><b>🔒 個人情報の取り扱い</b>
 <div class="notice">本アプリは、従業員のシフト登録・確認および人員配置管理を目的として利用します。LINE連携により取得した情報および氏名・部署等の必要最小限の情報は、本人確認・従業員承認・シフト管理のためにのみ利用します。住所、電話番号、生年月日、銀行口座、社会保険番号、マイナンバー等のシフト管理に不要な個人情報は、本アプリでは収集しません。</div>
 </div>
-<div class="notice">※LINE本人確認・従業員承認はSupabaseと連携しています。現在、プロフィール・シフト内容はこの端末内保存です。共有シフトデータベースへの移行は次の段階で行います。</div>
-</div></section><section id="register" class="page"><div class="card"><h2>＋ シフト登録</h2><p class="sub">マイページの氏名と主な勤務時間を自動で使用します。</p><label>氏名</label><input id="shiftName" placeholder="氏名は手入力もできます"><label>勤務日</label><input id="workDate" type="date"><div class="row"><div><label>出勤時間</label><input id="start" type="time"></div><div><label>退勤時間</label><input id="end" type="time"></div></div><label>休憩時間 <span class="muted">（該当するものにチェック）</span></label><div class="copybox break-options" id="breakOptions">
+<div class="notice">※LINE本人確認・従業員承認・シフト情報はSupabaseと連携します。氏名・部署・主な勤務時間の表示設定のみ、この端末に保存されます。</div>
+</div></section><section id="register" class="page"><div class="card"><h2>＋ シフト登録</h2><p class="sub">LINE認証された本人のシフトとして共有データベースに登録します。</p><label>氏名</label><input id="shiftName" placeholder="氏名は手入力もできます"><label>勤務日</label><input id="workDate" type="date"><div class="row"><div><label>出勤時間</label><input id="start" type="time"></div><div><label>退勤時間</label><input id="end" type="time"></div></div><label>休憩時間 <span class="muted">（該当するものにチェック）</span></label><div class="copybox break-options" id="breakOptions">
 <label class="check break-none"><input type="checkbox" value="none" id="breakNone"><span>1. 休憩なし</span></label>
 <label class="check"><input type="checkbox" name="breakSlot" value="10:30-10:45"><span>2. 10:30〜10:45</span></label>
 <div class="muted" style="margin:8px 2px 4px">3. 昼休憩（いずれか1つ）</div>
@@ -188,5 +188,156 @@ $('saveLiff').onclick=()=>{const id=$('liffId').value.trim();if(!/^[0-9]+-[A-Za-
 $('lineLogin').onclick=async()=>{if(!lineReady){alert('LIFF IDを設定し、HTTPSで公開したアプリから開いてください');return}if(!liff.isLoggedIn())liff.login({redirectUri:location.href});else{await verifyEmployee();alert(authState.approved?'LINEログイン・社内認証済みです':'LINEログイン済みです。現在は管理者の承認待ちです')}};
 $('lineLogout').onclick=()=>{if(lineReady&&liff.isLoggedIn()){liff.logout();location.reload()}else alert('ログインしていません')};
 $('shareLine').onclick=async()=>{const body=$('messageBody').value.trim();if(!body){alert('共有するメッセージを入力してください');return}if(!lineReady||!liff.isLoggedIn()){alert('LINEログイン後に利用できます');return}try{if(!liff.isApiAvailable('shareTargetPicker')){alert('この環境ではLINE共有に対応していません');return}await liff.shareTargetPicker([{type:'text',text:body}])}catch(e){alert('LINE共有を完了できませんでした')}};
+
+// ===== v18 Supabase共有シフト =====
+const SHIFT_API_URL='https://xgkmvmxuwjzbyywanfnq.supabase.co/functions/v1/shift-api';
+let sharedMyShifts=[];
+let sharedDayShifts=[];
+let sharedDayDate='';
+
+function cleanTime(v){return String(v||'').slice(0,5)}
+function normalizeShift(row){
+  const br=(row.shift_breaks||[]).map(b=>`${cleanTime(b.start_time)}-${cleanTime(b.end_time)}`);
+  return {
+    id:row.id,
+    name:row.employees?.name || authState.employee?.name || getProfile().name || '従業員',
+    date:row.work_date,
+    start:cleanTime(row.start_time),
+    end:cleanTime(row.end_time),
+    breaks:br,
+    breakMin:String(breakMinutes(br)),
+    department:row.employees?.department || authState.employee?.department || ''
+  };
+}
+async function callShiftApi(action,extra={}){
+  if(!lineReady||!liff.isLoggedIn())throw new Error('LINEログインが必要です');
+  const idToken=liff.getIDToken();
+  if(!idToken)throw new Error('LINE認証情報を取得できません');
+  const res=await fetch(SHIFT_API_URL,{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({idToken,action,...extra})
+  });
+  const data=await res.json().catch(()=>({}));
+  if(!res.ok||data.ok===false)throw new Error(data.error||'シフト処理に失敗しました');
+  return data;
+}
+async function loadMySharedShifts(){
+  const data=await callShiftApi('list_my');
+  sharedMyShifts=(data.shifts||[]).map(normalizeShift).sort((a,b)=>a.date.localeCompare(b.date)||a.start.localeCompare(b.start));
+  return sharedMyShifts;
+}
+async function loadDaySharedShifts(date){
+  if(!isAdmin())throw new Error('人員配置は管理者のみ確認できます');
+  const data=await callShiftApi('list_day',{workDate:date});
+  sharedDayShifts=(data.shifts||[]).map(normalizeShift);
+  sharedDayDate=date;
+  return sharedDayShifts;
+}
+
+$('addShift').onclick=async()=>{
+  const breaks=selectedBreaks();
+  const workDate=$('workDate').value,startTime=$('start').value,endTime=$('end').value;
+  if(!workDate||!startTime||!endTime){alert('勤務日・出勤時間・退勤時間を入力してください');return}
+  if(hmToMin(endTime)<=hmToMin(startTime)){alert('退勤時間は出勤時間より後にしてください');return}
+  const btn=$('addShift'); btn.disabled=true; btn.textContent='登録中...';
+  try{
+    await callShiftApi('create',{workDate,startTime,endTime,breaks});
+    $('shiftMsg').innerHTML='<div class="ok">✓ シフトを共有データベースに登録しました</div>';
+    await loadMySharedShifts();
+  }catch(e){
+    $('shiftMsg').innerHTML='<div class="authgate rejected">'+esc(e.message)+'</div>';
+  }finally{
+    btn.disabled=false; btn.textContent='このシフトを登録';
+  }
+};
+
+async function renderShifts(){
+  if(!$('shiftList'))return;
+  $('shiftList').innerHTML='<div class="empty">読み込み中...</div>';
+  try{
+    await loadMySharedShifts();
+    if(!sharedMyShifts.length){$('shiftList').innerHTML='<div class="empty">登録済みシフトはありません</div>';return}
+    $('shiftList').innerHTML=sharedMyShifts.map(s=>`<div class="shift"><b>${fmtDate(s.date)}　${esc(s.name)}</b><div class="muted">${s.start}〜${s.end} ／ 休憩：${s.breaks.length?s.breaks.join('・'):'なし'}</div><div class="actions"><button class="mini" onclick="openCopyShared('${s.id}')">✓ 複写</button><button class="mini" onclick="delSharedShift('${s.id}')">削除</button></div><div id="copy-${s.id}"></div></div>`).join('');
+  }catch(e){
+    $('shiftList').innerHTML='<div class="authgate rejected">'+esc(e.message)+'</div>';
+  }
+}
+window.delSharedShift=async id=>{
+  if(!confirm('このシフトを削除しますか？'))return;
+  try{await callShiftApi('delete',{shiftId:id});await renderShifts()}
+  catch(e){alert(e.message)}
+};
+window.openCopyShared=id=>{
+  const s=sharedMyShifts.find(x=>String(x.id)===String(id)),box=$('copy-'+id);
+  if(!s||!box)return;
+  const base=new Date(s.date+'T00:00:00');let days=[];
+  for(let i=1;i<=14;i++){let d=new Date(base);d.setDate(d.getDate()+i);let iso=d.toISOString().slice(0,10);days.push(`<label class="check"><input type="checkbox" class="copyday-shared" value="${iso}"><span>${fmtDate(iso)}</span></label>`)}
+  box.innerHTML=`<div class="copybox"><b>複写する日を選択</b><div class="muted">レ点を入れた日だけ複写します</div><div class="actions"><button class="mini" onclick="document.querySelectorAll('.copyday-shared').forEach(x=>x.checked=true)">すべて選択</button><button class="mini" onclick="document.querySelectorAll('.copyday-shared').forEach(x=>x.checked=false)">すべて解除</button></div><div class="checks">${days.join('')}</div><button class="primary" onclick="copySharedSelected('${id}')">✓ 選択した日に複写</button></div>`;
+};
+window.copySharedSelected=async id=>{
+  const src=sharedMyShifts.find(x=>String(x.id)===String(id));
+  const dates=[...document.querySelectorAll('.copyday-shared:checked')].map(x=>x.value);
+  if(!src||!dates.length){alert('複写する日を選択してください');return}
+  try{
+    for(const workDate of dates){
+      await callShiftApi('create',{workDate,startTime:src.start,endTime:src.end,breaks:src.breaks});
+    }
+    await renderShifts();
+    alert(dates.length+'日分を複写しました');
+  }catch(e){alert(e.message)}
+};
+
+function peopleForHourShared(h){
+  const from=h*60,to=(h+1)*60;
+  const shifts=sharedDayShifts.filter(s=>hmToMin(s.start)<to&&hmToMin(s.end)>from).sort((a,b)=>a.start.localeCompare(b.start));
+  const points=[from,from+15,from+30,from+45];
+  const counts=points.map(t=>shifts.filter(s=>hmToMin(s.start)<=t&&hmToMin(s.end)>t&&!isOnBreak(s,t)).length);
+  const available=shifts.slice(); available._minCount=counts.length?Math.min(...counts):0; return available;
+}
+function renderStaffMatrixShared(rows){
+  if(!$('staffMatrix'))return;
+  const names=[...new Set(sharedDayShifts.map(s=>s.name).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ja'));
+  if(!names.length){$('staffMatrix').innerHTML='<div class="matrixempty">この日の登録シフトはありません</div>';return}
+  const head='<thead><tr><th class="timecol">時間</th>'+names.map(n=>`<th class="personhead" title="${esc(n)}">${esc(n)}</th>`).join('')+'</tr></thead>';
+  const body='<tbody>'+rows.map(r=>{let active=new Map(r.people.map(p=>[p.name,p]));let shortage=r.count<r.need;return `<tr class="${shortage?'shortage':''}"><td class="timecol">${String(r.h).padStart(2,'0')}:00<br><span style="font-size:9px;font-weight:400">${r.count}/${r.need}人</span></td>`+names.map(n=>{let p=active.get(n);if(!p)return '<td class="off">－</td>';let br=(p.breaks||[]).some(x=>{let [a,b]=x.split('-').map(hmToMin);return a<(r.h+1)*60&&b>r.h*60});return br?'<td class="working" title="休憩あり">◐</td>':'<td class="working">●</td>'}).join('')+'</tr>'}).join('')+'</tbody>';
+  $('staffMatrix').innerHTML=`<div class="matrixwrap"><table class="staffmatrix">${head}${body}</table></div>`;
+}
+async function renderStaffing(resetDetail=true){
+  if(!$('staffDate'))return;
+  if(!$('staffDate').value)$('staffDate').value=new Date().toISOString().slice(0,10);
+  if(!isAdmin()){
+    $('staffSummary').innerHTML='<div class="notice">人員配置は管理者のみ確認できます。</div>';
+    $('shortageAlert').innerHTML='';$('hourGrid').innerHTML='';$('staffMatrix').innerHTML='';
+    return;
+  }
+  const date=$('staffDate').value;
+  $('staffSummary').innerHTML='<div class="empty">読み込み中...</div>';
+  try{
+    if(sharedDayDate!==date)await loadDaySharedShifts(date);
+    const needs=getNeeds(),rows=staffingHours.map(h=>{let people=peopleForHourShared(h);return {h,people,count:people._minCount??people.length,need:needs[h]}});
+    const dayNames=[...new Set(sharedDayShifts.map(s=>s.name).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ja'));
+    const shortage=rows.filter(r=>r.count<r.need),max=rows.reduce((a,b)=>b.count>a.count?b:a,rows[0]);
+    $('staffSummary').innerHTML=`<div class="staff-total"><b>${dayNames.length}</b><span>人がこの日に出勤予定</span><div class="names">${dayNames.length?dayNames.map(esc).join('・'):'登録シフトはありません'}</div></div><div class="staff-summary"><div class="metric"><b>${sharedDayShifts.length}</b><span>登録シフト</span></div><div class="metric"><b>${shortage.length}</b><span>不足時間帯</span></div><div class="metric"><b>${max.count}</b><span>最大配置人数</span></div></div>`;
+    $('shortageAlert').innerHTML=shortage.length?`<div class="shortage-panel"><h3>⚠️ 先に確認｜人員不足 ${shortage.length}時間帯</h3>${shortage.map(r=>`<div class="shortage-row"><b>${String(r.h).padStart(2,'0')}:00〜${String(r.h+1).padStart(2,'0')}:00</b><span>${r.count}人 ／ 必要${r.need}人</span><span class="shortage-num">${r.need-r.count}人不足</span></div>`).join('')}</div>`:'<div class="allgood-panel">✓ 設定した必要人数をすべての時間帯で満たしています</div>';
+    $('hourGrid').innerHTML=rows.map(r=>{let diff=r.count-r.need,cls=diff>=0?'good':diff===-1?'warn':'bad',label=diff>=0?'充足':diff===-1?'注意':`${-diff}人不足`;let workers=r.people.length?r.people.map(x=>`<span class="workerchip">${esc(x.name)} <small>${x.start}〜${x.end}</small></span>`).join(''):'<span class="noworker">勤務者なし</span>';return `<div class="hourcard ${cls}"><div class="hourtop"><div class="hourtime">${String(r.h).padStart(2,'0')}:00</div><div class="hourcount"><b>${r.count}</b>人 <span class="muted">／ 必要 ${r.need}人</span></div><div class="statuslabel">${label}</div></div><div class="hourworkers">${workers}</div></div>`}).join('');
+    renderStaffMatrixShared(rows);
+    if(resetDetail)$('workerDetail').innerHTML='';
+  }catch(e){
+    $('staffSummary').innerHTML='<div class="authgate rejected">'+esc(e.message)+'</div>';
+  }
+}
+if($('staffDate'))$('staffDate').onchange=()=>{sharedDayDate='';renderStaffing()};
+if($('applyDefaultNeed'))$('applyDefaultNeed').onclick=()=>{let v=Math.max(0,Number($('defaultNeed').value||0)),n={};staffingHours.forEach(h=>n[h]=v);saveNeeds(n);renderNeedGrid();sharedDayDate='';renderStaffing();};
+
+// LINE認証完了後、DB上の氏名をシフト登録欄に反映
+const _verifyEmployeeV18=verifyEmployee;
+verifyEmployee=async function(){
+  await _verifyEmployeeV18();
+  if(authState.approved&&authState.employee){
+    if($('shiftName')){$('shiftName').value=authState.employee.name||'';$('shiftName').readOnly=true}
+  }
+};
+
 loadProfile();prefillShift();renderBoard();renderNeedGrid();if($('staffDate'))$('staffDate').value=new Date().toISOString().slice(0,10);setStaffView(localStorage.getItem('mtStaffViewV12')||'list');initLine();
 </script></body></html>
