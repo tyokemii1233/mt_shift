@@ -223,6 +223,7 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&
 const LIFF_ID='2011979112-zRK9twVc';
 const SHIFT_API_URL='https://xgkmvmxuwjzbyywanfnq.supabase.co/functions/v1/shift-api';
 const PROFILE_API_URL = "https://xgkmvmxuwjzbyywanfnq.supabase.co/functions/v1/profile-api";
+const STAFFING_NEEDS_API_URL = 'https://xgkmvmxuwjzbyywanfnq.supabase.co/functions/v1/staffing-needs-api';
 const breakOptions=[
 ['none','休憩なし'],
 ['10:30-10:45','10:30〜10:45'],
@@ -1419,25 +1420,99 @@ window.executeCopy=async function(id){
   await loadMyShifts();
 };
 
-function getNeedMap(){
-  try{
-    return JSON.parse(
-      localStorage.getItem('mtNeedMap')||'{}'
-    );
-  }catch(e){
+async function getNeedMap() {
+  const idToken = liff.getIDToken();
+
+  if (!idToken) {
+    console.error("LINE認証情報を取得できませんでした");
+    return {};
+  }
+
+  try {
+    const response = await fetch(STAFFING_NEEDS_API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        idToken: idToken,
+        action: "get"
+      })
+    });
+
+    const result = await response.json();
+
+    if (!response.ok || !result.ok) {
+      throw new Error(
+        result.error || "必要人数を取得できませんでした"
+      );
+    }
+
+    const map = {};
+
+    (result.needs || []).forEach(item => {
+      map[String(item.hour).padStart(2, "0")] =
+        Number(item.required);
+    });
+
+    window.canEditStaffingNeeds =
+      result.canEdit === true;
+
+    return map;
+
+  } catch (error) {
+    console.error("必要人数取得エラー:", error);
     return {};
   }
 }
 
-function saveNeedMap(map){
-  localStorage.setItem(
-    'mtNeedMap',
-    JSON.stringify(map)
+async function saveNeedMap(map) {
+  const idToken = liff.getIDToken();
+
+  if (!idToken) {
+    alert("LINE認証情報を取得できませんでした");
+    return false;
+  }
+
+  const needs = Object.entries(map).map(([hour, required]) => ({
+    hour: Number(hour),
+    required: Number(required)
+  }));
+
+  try {
+    const response = await fetch(STAFFING_NEEDS_API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        idToken: idToken,
+        action: "save",
+        needs: needs
+      })
+    });
+
+    const result = await response.json();
+
+    if (!response.ok || !result.ok) {
+      throw new Error(
+        result.error || "必要人数を保存できませんでした"
+      );
+    }
+
+    return true;
+
+  } catch (error) {
+    console.error("必要人数保存エラー:", error);
+    alert(error.message || "必要人数を保存できませんでした");
+    return false;
+  }
+}
   );
 }
 
-function initNeedGrid(){
-  const map=getNeedMap();
+
+  const map=await getNeedMap();
 
   let html='';
 
@@ -1463,17 +1538,18 @@ function initNeedGrid(){
 
   $('needGrid')
     .querySelectorAll('input')
+    input.disabled = window.canEditStaffingNeeds !== true;
     .forEach(input=>{
       input.addEventListener(
         'change',
         ()=>{
-          const m=getNeedMap();
+          const m=await getNeedMap();
           m[input.dataset.hour]=
             Math.max(
               0,
               Number(input.value)||0
             );
-          saveNeedMap(m);
+          await saveNeedMap(m);
           renderStaffing();
         }
       );
@@ -1482,7 +1558,7 @@ function initNeedGrid(){
 
 $('applyDefaultNeed').addEventListener(
   'click',
-  ()=>{
+  async ()=>{
     const val=Math.max(
       0,
       Number($('defaultNeed').value)||0
@@ -1496,7 +1572,7 @@ $('applyDefaultNeed').addEventListener(
       ]=val;
     }
 
-    saveNeedMap(map);
+    await saveNeedMap(map);
     initNeedGrid();
     renderStaffing();
 
@@ -1795,7 +1871,7 @@ function renderMatrix(){
     return;
   }
 
-  const needMap=getNeedMap();
+  const needMap=await getNeedMap();
 
   let html=`
     <div class="matrixcount">
