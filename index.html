@@ -147,7 +147,53 @@
 <button class="primary" id="saveShift">シフトを登録</button>
 </div></section>
 
-<section id="shifts" class="page"><div class="card"><h2>📅 自分のシフト</h2><p class="sub">登録後の変更・取消は申請制です。実際に働いた時間は「実働入力」から記録できます。</p><div id="shiftList"></div></div></section>
+<section id="shifts" class="page">
+  <div class="card">
+    <h2>📅 自分のシフト</h2>
+    <p class="sub">カレンダーまたは一覧で自分のシフトを確認できます。</p>
+
+    <div style="display:flex;gap:8px;margin-bottom:16px;">
+      <button
+        type="button"
+        class="secondary"
+        id="showCalendarView"
+        style="flex:1;"
+      >
+        📅 カレンダー
+      </button>
+
+      <button
+        type="button"
+        class="secondary"
+        id="showShiftListView"
+        style="flex:1;"
+      >
+        📋 一覧
+      </button>
+    </div>
+
+    <div id="shiftCalendarArea">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <button type="button" class="secondary" id="calendarPrevMonth">
+          ＜
+        </button>
+
+        <b id="calendarMonthTitle"></b>
+
+        <button type="button" class="secondary" id="calendarNextMonth">
+          ＞
+        </button>
+      </div>
+
+      <div id="shiftCalendar"></div>
+      <div id="calendarShiftDetail" style="margin-top:14px;"></div>
+    </div>
+
+    <div id="shiftListArea" style="display:none;">
+      <div id="shiftList"></div>
+    </div>
+  </div>
+</section>
 
 <section id="staffing" class="page"><div class="card"><h2>▥ 人員配置</h2><p class="sub">時間帯ごとの配置人数と不足状況を確認できます。</p>
 <label>確認する日</label><input type="date" id="staffDate">
