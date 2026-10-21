@@ -515,10 +515,11 @@ async function loadPendingEmployees(){
       );
     }
 
-    const rows=
-      result.employees||
-      result.pending||
-      [];
+    const rows = (
+  result.employees ||
+  result.pending ||
+  []
+).filter(e => e.approval_status === 'pending');
 
     if(!rows.length){
       box.innerHTML=
