@@ -776,6 +776,7 @@ async function loadMyShifts(){
     });
 
     renderMyShifts();
+renderShiftCalendar();
 
   }catch(err){
     console.error(err);
@@ -785,7 +786,177 @@ async function loadMyShifts(){
   }
 }
 
-function requestLabel(req){
+// ===== シフトカレンダー =====
+
+let shiftCalendarDate = new Date();
+
+function renderShiftCalendar() {
+  const calendar = document.getElementById("shiftCalendar");
+  const title = document.getElementById("calendarMonthTitle");
+
+  if (!calendar || !title) return;
+
+  const year = shiftCalendarDate.getFullYear();
+  const month = shiftCalendarDate.getMonth();
+
+  title.textContent = `${year}年${month + 1}月`;
+
+  const firstDay = new Date(year, month, 1);
+  const lastDay = new Date(year, month + 1, 0);
+  const startWeekday = firstDay.getDay();
+
+  let html = `
+    <div style="
+      display:grid;
+      grid-template-columns:repeat(7,1fr);
+      gap:4px;
+      text-align:center;
+      font-size:12px;
+    ">
+      <div style="color:#c26b6b;font-weight:700;">日</div>
+      <div style="font-weight:700;">月</div>
+      <div style="font-weight:700;">火</div>
+      <div style="font-weight:700;">水</div>
+      <div style="font-weight:700;">木</div>
+      <div style="font-weight:700;">金</div>
+      <div style="color:#6f86b7;font-weight:700;">土</div>
+  `;
+
+  for (let i = 0; i < startWeekday; i++) {
+    html += `<div></div>`;
+  }
+
+  for (let day = 1; day <= lastDay.getDate(); day++) {
+    const dateStr =
+      `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+
+    const dayShifts = (currentShifts || []).filter(
+      shift => shift.work_date === dateStr
+    );
+
+    let shiftText = "";
+
+    if (dayShifts.length) {
+      shiftText = dayShifts
+        .map(shift =>
+          `${hm(shift.start_time)}〜${hm(shift.end_time)}`
+        )
+        .join("<br>");
+    }
+
+    html += `
+      <button
+        type="button"
+        data-calendar-date="${dateStr}"
+        style="
+          min-height:72px;
+          padding:6px 2px;
+          border:1px solid #eadada;
+          border-radius:10px;
+          background:${dayShifts.length ? "#fff1f1" : "#fff"};
+          color:#76585c;
+          font-family:Meiryo,sans-serif;
+          overflow:hidden;
+        "
+      >
+        <div style="font-weight:700;">${day}</div>
+
+        ${
+          shiftText
+            ? `<div style="
+                margin-top:5px;
+                font-size:10px;
+                line-height:1.3;
+                font-weight:700;
+              ">${shiftText}</div>`
+            : ""
+        }
+      </button>
+    `;
+  }
+
+  html += `</div>`;
+
+  calendar.innerHTML = html;
+
+  calendar
+    .querySelectorAll("[data-calendar-date]")
+    .forEach(button => {
+      button.addEventListener("click", () => {
+        showCalendarShiftDetail(button.dataset.calendarDate);
+      });
+    });
+}
+
+function showCalendarShiftDetail(dateStr) {
+  const detail = document.getElementById("calendarShiftDetail");
+
+  if (!detail) return;
+
+  const shifts = (currentShifts || []).filter(
+    shift => shift.work_date === dateStr
+  );
+
+  if (!shifts.length) {
+    detail.innerHTML = `
+      <div class="notice">
+        ${dateStr}<br>
+        この日のシフトはありません。
+      </div>
+    `;
+    return;
+  }
+
+  detail.innerHTML = shifts
+    .map(shift => `
+      <div style="
+        padding:14px;
+        margin-bottom:8px;
+        background:#fff7f7;
+        border:1px solid #eadada;
+        border-radius:12px;
+      ">
+        <b>${dateStr}</b>
+        <div style="margin-top:6px;font-size:16px;">
+          ${hm(shift.start_time)}〜${hm(shift.end_time)}
+        </div>
+      </div>
+    `)
+    .join("");
+}
+
+document
+  .getElementById("calendarPrevMonth")
+  ?.addEventListener("click", () => {
+    shiftCalendarDate.setMonth(
+      shiftCalendarDate.getMonth() - 1
+    );
+    renderShiftCalendar();
+  });
+
+document
+  .getElementById("calendarNextMonth")
+  ?.addEventListener("click", () => {
+    shiftCalendarDate.setMonth(
+      shiftCalendarDate.getMonth() + 1
+    );
+    renderShiftCalendar();
+  });
+
+document
+  .getElementById("showCalendarView")
+  ?.addEventListener("click", () => {
+    document.getElementById("shiftCalendarArea").style.display = "block";
+    document.getElementById("shiftListArea").style.display = "none";
+    renderShiftCalendar();
+  });
+
+document
+  .getElementById("showShiftListView")
+  ?.addEventListener("click", () => {
+    document.getElementById("shiftCalendarArea").style.display = "none";
+    document.getElementById("shiftListArea").style.display = "block";
+  });function requestLabel(req){
   if(!req)return '';
 
   const type=
