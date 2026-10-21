@@ -1286,11 +1286,7 @@ $('applyDefaultNeed').addEventListener(
     alert('必要人数を全時間へ反映しました');
   }
 );async function loadStaffing(){
-  if(currentEmployee?.role!=='admin'){
-    $('staffSummary').innerHTML=
-      '<div class="notice">人員配置は管理者のみ確認できます。</div>';
-    return;
-  }
+  
 
   const workDate=
     $('staffDate').value||
