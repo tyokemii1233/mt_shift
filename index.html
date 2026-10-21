@@ -157,7 +157,7 @@
 <div id="listArea"><div id="hourGrid" class="hourgrid"></div></div>
 <div id="matrixArea" class="hide"><div id="staffMatrix"></div></div>
 <div id="workerDetail"></div>
-<div class="adminbox"><b>必要人数設定</b><div class="row"><div><label>一括設定</label><input type="number" id="defaultNeed" min="0" value="3"></div><div style="display:flex;align-items:end"><button class="secondary" id="applyDefaultNeed">全時間へ反映</button></div></div><div id="needGrid" class="needgrid"></div></div>
+<div class="adminbox admin-only"><b>必要人数設定</b><div class="row"><div><label>一括設定</label><input type="number" id="defaultNeed" min="0" value="3"></div><div style="display:flex;align-items:end"><button class="secondary" id="applyDefaultNeed">全時間へ反映</button></div></div><div id="needGrid" class="needgrid"></div></div>
 <div id="adminShiftArea" class="adminbox hide"><b>管理者用｜登録シフト</b><div id="adminShiftList" class="admin-shift-list"></div>
 <div class="csv-actions"><button class="secondary" id="csvDay">この日をCSV</button><button class="secondary" id="csvRange">期間CSV</button></div>
 <div class="range-row"><div><label>開始日</label><input type="date" id="csvFrom"></div><div><label>終了日</label><input type="date" id="csvTo"></div></div>
@@ -354,8 +354,9 @@ function showPage(id){
     loadMyShifts();
   }
 
-  if(id==='staffing' && currentEmployee?.role==='admin'){
-    loadStaffing();
+  if(id==='staffing'){
+  loadStaffing();
+}
   }
 
   if(id==='board'){
@@ -1286,11 +1287,7 @@ $('applyDefaultNeed').addEventListener(
     alert('必要人数を全時間へ反映しました');
   }
 );async function loadStaffing(){
-  if(currentEmployee?.role!=='admin'){
-    $('staffSummary').innerHTML=
-      '<div class="notice">人員配置は管理者のみ確認できます。</div>';
-    return;
-  }
+
 
   const workDate=
     $('staffDate').value||
