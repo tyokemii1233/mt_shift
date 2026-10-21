@@ -32,7 +32,50 @@
 <div id="lineUser" class="lineuser"></div>
 <div id="authGate" class="authgate pending">⏳ 社内利用状況を確認しています...</div>
 <div class="summary"><div class="avatar">👤</div><div><b id="profileName">未設定</b><div class="muted" id="profileDept">部署未設定</div></div></div>
-<div id="profileEditArea" style="margin-top:16px;">
+<div style="text-align:center;margin:16px 0;">
+  <img
+    id="profileImagePreview"
+    src=""
+    alt="プロフィール画像"
+    style="
+      display:none;
+      width:100px;
+      height:100px;
+      border-radius:50%;
+      object-fit:cover;
+      margin:0 auto 12px;
+      border:3px solid #e8c9cf;
+    "
+  >
+
+  <label
+    for="profileImageInput"
+    style="
+      display:inline-block;
+      padding:10px 18px;
+      background:#f7e6e8;
+      color:#76585c;
+      border-radius:12px;
+      font-weight:700;
+      cursor:pointer;
+    "
+  >
+    📷 プロフィール写真を変更
+  </label>
+
+  <input
+    type="file"
+    id="profileImageInput"
+    accept="image/jpeg,image/png,image/webp"
+    style="display:none;"
+  >
+
+  <div
+    id="profileImageMessage"
+    class="muted"
+    style="margin-top:8px;"
+  ></div>
+</div><div id="profileEditArea" style="margin-top:16px;">
   <label>
     氏名
     <span class="req">*</span>
@@ -2898,7 +2941,81 @@ window.addEventListener("load", async () => {
   }
 });
   
-  startApp();
+  // ===== プロフィール画像変更 =====
+const PROFILE_IMAGE_API_URL =
+  "https://xgkmvmxuwjzbyywanfnq.supabase.co/functions/v1/profile-image-api";
+
+async function uploadProfileImage(file) {
+  const message = document.getElementById("profileImageMessage");
+
+  try {
+    if (!file) return;
+
+    message.textContent = "画像をアップロード中...";
+
+    const idToken = liff.getIDToken();
+
+    if (!idToken) {
+      throw new Error("LINE認証情報を取得できませんでした");
+    }
+
+    const formData = new FormData();
+    formData.append("idToken", idToken);
+    formData.append("image", file);
+
+    const response = await fetch(PROFILE_IMAGE_API_URL, {
+      method: "POST",
+      body: formData
+    });
+
+    const result = await response.json();
+
+    if (!response.ok || !result.ok) {
+      throw new Error(
+        result.error || "プロフィール画像を変更できませんでした"
+      );
+    }
+
+    const avatar = document.querySelector(".avatar");
+
+    if (avatar && result.profileImageUrl) {
+      avatar.innerHTML = `
+        <img
+          src="${result.profileImageUrl}?v=${Date.now()}"
+          alt="プロフィール画像"
+          style="
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            border-radius:50%;
+          "
+        >
+      `;
+    }
+
+    message.textContent = "プロフィール画像を変更しました";
+
+  } catch (error) {
+    console.error("プロフィール画像変更エラー:", error);
+    message.textContent =
+      error.message || "プロフィール画像の変更に失敗しました";
+  }
+}
+
+document
+  .getElementById("profileImageInput")
+  ?.addEventListener("change", async function () {
+    const file = this.files?.[0];
+
+    if (!file) return;
+
+    await uploadProfileImage(file);
+
+    // 同じ画像をもう一度選択できるようにする
+    this.value = "";
+  });
+  
+startApp();
 </script>
 </body>
 </html>
